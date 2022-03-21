@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+}
+
+a {
+    all: unset;
+}
+
+.topbar {
+    display: inline;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.topbar img{
+    position: absolute;
+    width: 10vw;
+    height: 5vh;
+}
+
+.menu li{
+    display: inline;
+    float: right;
+    padding: 25px;
+    color: white;
+}
+
+.banner{
+    background-image:url(../images/BG-Banner.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: relative;
+}
+
+.banner-title{
+    position: absolute;
+    display: block;
+    bottom: 0;
+    color: white;
+}
