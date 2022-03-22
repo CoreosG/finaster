@@ -4,17 +4,22 @@
     vertical-align: baseline;
     list-style: none;
     border: 0;
+    --orange: #ff6600;
+    --black: #4d4d4d;
+    --grey: #808080;
+}
+
+a {
+    all: unset;
 }
 
 .banner{
-    background-image:url(../images/BG-Banner.webp);
+    background-image:url(../images/fundo_topo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
-    /* display: flex; */
-    position: absolute;
 }
 
 .container {
@@ -27,47 +32,81 @@
     position: relative;
     display: inline-flex;
     width: 100%;
+    margin-top: 2vh;
 }
 
 .topbar img{
     width: 170px;
     height: auto;
-    padding-left: 5vw;
+    margin-left: 13vw;
 }
 
 .topbar nav{
     width: 100%;
     text-align: right;
     padding-top: 2.5vh;
-    padding-right: 5vw;
-}
-
-a {
-    all: unset;
+    padding-right: 13vw;
 }
 
 li {
     color: white;
     display: inline;
     text-align: center;
-    padding: 10px;
+    margin-left: 4.5vw;
+    font-style: 'Gill Sans';
+    font-weight: 30px;
+    font-size: 17px;
 }
 
 li:hover{
     cursor:pointer;
+    border-bottom: ;
 }
 
 .banner-title {
     color: white;
     position: absolute;
-    bottom: 0;
-    left: 5vw;
+    bottom: 10vh;
+    left: 13vw;
+}
+
+.banner-title h1{
+    font-size: 50px;
+    font-family: 'Gill Sans';
+    width: 50%;
+}
+
+.banner-title h3 {
+    font-size: 25px;
+    font-family: 'Gill Sans';
+    width: 50%;
+    padding-top: 10px;
 }
 
 .serviço {
-    background-color: blue;
-    top: 100vh;
-    position: absolute;
+    background-color: var(--orange);
+    position: relative;
     width: 100vw;
     height: 50vh;
+}
+
+.vantagens {
+    background-color: var(--grey);
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+}
+
+.sobre {
+    background-color: var(--black);
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.encontre-nos {
+    background-color: var(--grey);
+    position: relative;
+    width: 100vw;
+    height: 80vh;
 }
