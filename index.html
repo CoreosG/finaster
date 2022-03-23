@@ -9,45 +9,62 @@
     <link rel="icon" type="image/png" href="images/favicon/logo.png">
     <!-- stylesheet -->
     <link rel="stylesheet" href="styles/style.css">
+    <!-- scripts -->
+    <script src="scripts/script.js" defer></script>
     <title>Finaster | Assessoria Financeira</title>
 </head>
 <body>
     <main>
-        <section class="banner">
+        <section class="banner" id="mainSection">
             <div class="container">
-                <div class="topbar">
-                    <a href="index.html"><img src="./images/sprite/logo.png" alt="finaster_logo"></a>
-                    <nav class="menu">
-                        <ol>
-                            <li><a href="#serviço">Antecipação</a></li>
-                            <li><a href="#vantagens">Vantagens</a></li>
-                            <li><a href="#sobre">Sobre a Finaster</a></li>
-                            <li><a href="#encontre-nos">Encontre-nos</a></li>
-                        </ol>
+                <div class="topbar" id="navbar">
+                    <figure class="logodiv">
+                        <a href="index.html"><img src="./images/sprite/logo.png" alt="finaster_logo"></a>
+                    </figure>
+                    <nav class="menu" id="navBtns">
+                        <ul>
+                            <li><a href="#serviço" class="link">Antecipação</a></li>
+                            <li><a href="#vantagens" class="link">Vantagens</a></li>
+                            <li><a href="#sobre" class="link">Sobre a Finaster</a></li>
+                            <li><a href="#encontre-nos" class="link">Encontre-nos</a></li>
+                            <li><a href="" id="btnEntrar">Entrar</a></li>
+                        </ul>
+                        
+                        
                     </nav>
                 </div>
-                <div class="banner-title">
-                    <h1>Vendeu a prazo, mas precisa do dinheiro hoje?</h1>
+                <article class="banner-title">
+                    <h1>Vendeu a prazo, mas precisa do dinheiro <span class="orangeText">hoje?</span></h1>
                     <h3>Antecipamos suas duplicatas e pagamos à vista para sua empresa.</h3>
+                </article>
+                <div id="form">
+                    <div class="form-text">
+                        <h1>Preencha os dados abaixo e receba uma simulação de antecipação de <span class="orangeText">GRAÇA!</span></h1>
+                    </div>
+                    <form action="./scripts/forms.js" method="POST">
+                        <input type="text" id="nome" required>Nome:</input>
+    
+                    </form>
                 </div>
             </div>
+            
         </section>
-        <section class="serviço">
+        <section class="serviço" id="serviço">
             <div class="wrapper-serviço">
                 <h1>Olá mundo</h1>
             </div>
         </section>
-        <section class="vantagens">
+        <section class="vantagens" id="vantagens">
             <div class="wrapper-vantagens">
                 <h1>Olá mundo vantagens</h1>
             </div>
         </section>
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="wrapper-sobre">
                 <h1>Olá mundo sobre</h1>
             </div>
         </section>
-        <section class="encontre-nos">
+        <section class="encontre-nos" id="encontre-nos">
             <div class="wrapper-encontre-nos">
                 <h1>Olá mundo encontre-nos</h1>
             </div>
