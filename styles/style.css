@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 /* For mobile version: 1240 width */
+:root {
+    --orange: #ff6600;
+    --black: #4d4d4d;
+    --grey: #808080;
 
+    --size-bezel: 0.5rem;
+    --size-radius: 4px;
+
+    font-size: calc(.6rem + .4vw);
+}
 
 
 * {
@@ -9,9 +18,6 @@
     vertical-align: baseline;
     list-style: none;
     border: 0;
-    --orange: #ff6600;
-    --black: #4d4d4d;
-    --grey: #808080;
     font-family: 'Roboto Slab', serif;
 }
 
@@ -54,12 +60,12 @@ a {
 }
 
 .logodiv {
-    position: absolute;
+    position: relative;
     display: inline;
     box-sizing: border-box;
-    width: 170px;
-    height: 100px;
-    margin-top: 1vh;
+    width: 190px;
+    height: auto;
+    margin-top: auto;
     margin-left: 13%;
 }
 
@@ -74,6 +80,7 @@ a {
     padding-right: 6%;
     padding-top: 3.2vh;
     margin-right: 5%;
+    /* margin-left: 30%; */
 }
 
 .link, #btnEntrar {
@@ -81,7 +88,7 @@ a {
     text-align: center;
     margin-left: 2vw;
     font-weight: 30px;
-    font-size: 19px;
+    font-size: 1.1rem;
     color: white;
     text-decoration: none;
     padding: 0.2em 0;
@@ -120,20 +127,20 @@ a {
 
 #btnEntrar {
     background-color: var(--orange);
-    padding: 10px 40px;
+    padding: 0.7rem 2.2rem;
     border-radius: 0.4em;
 }
 
 #btnEntrar:hover{
     background-color: orangered;
-    transition: background-color 0.5s ease-in;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .banner-title {
     color: white;
     text-shadow: 1px 1px var(--orange);
     position: absolute;
-    bottom: 20%;
+    bottom: 23%;
     left: 13%;
 }
 
@@ -143,31 +150,126 @@ a {
 }
 
 .banner-title h1{
-    font-size: 50px;
+    font-size: 3rem;
     width: 50%;
 }
 
 .banner-title h3 {
-    font-size: 25px;
+    font-size: 1.5rem;
     width: 50%;
-    padding-top: 10px;
+    padding-top: 0.2vh;
 }
 
 #form {
-    background-color: azure;
+    background-color: white;
     font-family: 'Roboto Slab', serif;
     border-radius: 0.4em;
     display: block;
-    position: sticky;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     z-index: 9;
-    top: 35%;
+    top: 40%;
     left: 56%;
-    width: 33%;
-    height: 70%;
+    width: 32vw;
+    height: 70vh;
 }
 
-.form-text {
+.form-text-wrapper {
+    position: absolute;
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 3% 3%;
+}
 
+.form-wrapper {
+    position: absolute;
+    width: 90%;
+    margin-top: 17%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.input {
+    position: relative;
+    margin: auto auto;
+}
+
+.input__label {
+    position: absolute;
+    display: inline;
+	 left: 0;
+	 top: 0;
+	 padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
+	 margin: calc(var(--size-bezel) - 0.55rem) calc(var(--size-bezel) * .70);
+	 background: var(--orange);
+	 white-space: nowrap;
+	 transform: translate(0, 0);
+	 transform-origin: 0 0;
+	 background: white;
+	 transition: transform 120ms ease-in;
+	 font-weight: bold;
+	 /* line-height: 1.2; */
+}
+
+.input__field {
+    box-sizing: border-box;
+    display: inline;
+    width: 100%;
+    border: 2px solid currentColor;
+    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+    margin: 2% auto;
+    color: currentColor;
+    background: white;
+    border-radius: var(--size-radius);
+    font-size: 0.85rem;;
+    font-weight: bold;
+}
+
+.input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
+    transform: translate(0.25rem, -75%) scale(0.8);
+    color: var(--orange);
+}
+
+.list {
+    position: relative;
+}
+
+.list__field {
+    box-sizing: border-box;
+    display: inline;
+    width: 100%;
+    border: 2px solid currentColor;
+    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+    margin: 2% auto;
+    color: currentColor;
+    background: white;
+    border-radius: var(--size-radius);
+    font-size: 0.85rem;;
+    font-weight: bold;
+}
+
+.list__label {
+    position: absolute;
+    display: inline;
+	 left: 0;
+	 top: 0;
+	 padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
+	 margin: calc(var(--size-bezel) - 8px) calc(var(--size-bezel) * .5);
+	 background: var(--orange);
+	 white-space: nowrap;
+	 transform: translate(0, 0);
+	 transform-origin: 0 0;
+	 background: white;
+	 transition: transform 120ms ease-in;
+	 font-weight: bold;
+	 line-height: 1.2;
+}
+
+
+.list__field:focus + .list__label, .list__field:not(:placeholder-shown) + .list__label {
+    transform: translate(0.5rem, -75%) scale(0.8);
+    color: var(--orange);
 }
 
 .serviço {

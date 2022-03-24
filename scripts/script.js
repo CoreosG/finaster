@@ -10,7 +10,6 @@ window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
     let mainSectionY = document.getElementById("mainSection").getBoundingClientRect().bottom;
     let formY = document.getElementById("form").getBoundingClientRect().bottom;
-    console.log(formY);
     if (mainSectionY < 0) {
         toggleMenuStyles(true);
         if (prevScrollpos > currentScrollPos) {
