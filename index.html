@@ -18,17 +18,15 @@
     <main>
         <section class="banner" id="mainSection">
             <div class="container">
-                <div class="topbar" id="navbar">
-                    <figure class="logodiv">
-                        <a href="index.html"><img src="./images/sprite/logo.png" alt="finaster_logo"></a>
-                    </figure>
+                <div class="navbar" id="navbar">
                     <nav class="menu" id="navBtns">
                         <ul>
                             <li><a href="#serviço" class="link">Antecipação</a></li>
                             <li><a href="#vantagens" class="link">Vantagens</a></li>
+                            <li class="logoSpace"><a href="index.html"><img src="./images/sprite/logo.png" alt="finaster_logo" /></a></li>
                             <li><a href="#sobre" class="link">Sobre a Finaster</a></li>
                             <li><a href="#encontre-nos" class="link">Encontre-nos</a></li>
-                            <li><a href="" id="btnEntrar">Entrar</a></li>
+                            <!-- <li><a href="" id="btnEntrar">Entrar</a></li> -->
                         </ul>
                         
                         
@@ -38,7 +36,10 @@
                     <h1>Vendeu a prazo, mas precisa do dinheiro <span class="orangeText">hoje?</span></h1>
                     <h3>Antecipamos suas duplicatas e pagamos à vista para sua empresa.</h3>
                 </article>
-                <div id="form">
+                <div class="simule">
+                    <button class="btnSimule" onclick="openForm()">Clique aqui e simule agora mesmo</button>
+                </div>
+                <!-- <div id="form">
                     <div class="form-text-wrapper">
                         <h1>Preencha os dados abaixo e receba uma simulação de antecipação de <span style="color: var(--orange)">GRAÇA!</span></h1>
                     </div>
@@ -100,7 +101,7 @@
                     </div>
                     
                     
-                </div>
+                </div> -->
             </div>
             
         </section>

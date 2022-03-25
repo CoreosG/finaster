@@ -8,7 +8,7 @@
     --size-bezel: 0.5rem;
     --size-radius: 4px;
 
-    font-size: calc(.6rem + .4vw);
+    font-size: (0.6rem + 0.4vw);
 }
 
 
@@ -21,25 +21,25 @@
     font-family: 'Roboto Slab', serif;
 }
 
+body {
+    margin: 0 auto;
+}
+
 ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-a {
-    display: block;
-    position: relative;
-    padding: 0.2em 0;
-}
+
 
 .banner{
     background-image:url(../images/banner/656852.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -47,52 +47,63 @@ a {
     display: block;
     position: relative;
     height: 100%;
+    justify-content: center;
 }
 
-.topbar {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 9vh;
-    margin-top: 2vh;
+.navbar {
+    position: relative;
     z-index: 10;
-    transition: top 0.3s;
+    text-decoration: none;
+    color: transparent;
+    background-color: rgba(240,255,255,0.1);
+    border-bottom: 1px solid rgba(240,255,255,0.1);
+    height: auto;
 }
 
 .logodiv {
-    position: relative;
-    display: inline;
-    box-sizing: border-box;
-    width: 190px;
-    height: auto;
-    margin-top: auto;
-    margin-left: 13%;
+    position: absolute;
+    top: 1%;
+    left: 41%;
+    right: 41%;
 }
-
-.logodiv img {
-    width: 100%;
-    height: 100%;
-}
-
 
 .menu{
-    width: 100%;
-    padding-right: 6%;
-    padding-top: 3.2vh;
-    margin-right: 5%;
-    /* margin-left: 30%; */
+    width: 100vw;
+    height: auto;
 }
 
-.link, #btnEntrar {
-    display: inline;
-    text-align: center;
-    margin-left: 2vw;
-    font-weight: 30px;
-    font-size: 1.1rem;
+
+
+.menu > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu > ul > li {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    height: auto;
+}
+
+.menu > ul > li > a {
+    /* color: var(--orange); */
+    display: table-cell;
+    justify-content: center;
     color: white;
     text-decoration: none;
-    padding: 0.2em 0;
-    
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(1rem + 0.3vw);
+}
+
+
+.logoSpace > a > img{
+    width: calc(9rem + 3vw);
+    padding-top: 2%;
 }
 
 .link::after{
@@ -125,23 +136,60 @@ a {
     transform: scale(1);
   }
 
-#btnEntrar {
+.btnEntrar {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
     background-color: var(--orange);
     padding: 0.7rem 2.2rem;
     border-radius: 0.4em;
 }
 
-#btnEntrar:hover{
+
+.simule {
+    position: relative;
+    width: 100%;
+    margin-top: calc(5vh + 2%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.btnSimule {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--orange);
+    padding: 1rem 2.2rem;
+    border-radius: 0.4em;
+}
+
+.btnSimule:hover{
+    cursor: pointer;
+    background-color: orangered;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btnEntrar:hover{
+    cursor: pointer;
     background-color: orangered;
     transition: background-color 0.2s ease-in-out;
 }
 
 .banner-title {
     color: white;
+    background-color: rgba(0, 0, 0, 0.5);
     text-shadow: 1px 1px var(--orange);
-    position: absolute;
-    bottom: 23%;
-    left: 13%;
+    display: flexbox;
+    margin-top: calc(5vh + 10%);
+    position: relative;
+    text-align: center;
+}
+
+.banner-title > h1,h3 {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .orangeText {
@@ -151,12 +199,10 @@ a {
 
 .banner-title h1{
     font-size: 3rem;
-    width: 50%;
 }
 
 .banner-title h3 {
     font-size: 1.5rem;
-    width: 50%;
     padding-top: 0.2vh;
 }
 
