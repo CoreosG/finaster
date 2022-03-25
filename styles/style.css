@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
-/* For mobile version: 1240 width */
+/* For mobile version: 1280 x 800 width */
 :root {
     --orange: #ff6600;
     --black: #4d4d4d;
@@ -165,27 +165,29 @@ a {
     font-family: 'Roboto Slab', serif;
     border-radius: 0.4em;
     display: block;
-    position: relative;
+    position: absolute;
     justify-content: center;
     align-items: center;
     z-index: 9;
     top: 40%;
     left: 56%;
     width: 32vw;
-    height: 70vh;
+    height: 80%;
 }
 
 .form-text-wrapper {
-    position: absolute;
-    font-size: 0.85rem;
+    position: relative;
+    font-size: 0.65vw;
     text-align: center;
+    height: auto;
     margin: 3% 3%;
 }
 
 .form-wrapper {
     position: absolute;
     width: 90%;
-    margin-top: 17%;
+    height: 60%;
+    margin-top: 0.5%;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -193,6 +195,8 @@ a {
 .input {
     position: relative;
     margin: auto auto;
+    width: 100%;
+    height: 100%;
 }
 
 .input__label {
@@ -201,7 +205,7 @@ a {
 	 left: 0;
 	 top: 0;
 	 padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
-	 margin: calc(var(--size-bezel) - 0.55rem) calc(var(--size-bezel) * .70);
+	 margin: calc(var(--size-bezel) - 0.55vh) calc(var(--size-bezel) * .70);
 	 background: var(--orange);
 	 white-space: nowrap;
 	 transform: translate(0, 0);
@@ -209,6 +213,7 @@ a {
 	 background: white;
 	 transition: transform 120ms ease-in;
 	 font-weight: bold;
+     font-size: 0.85vw;
 	 /* line-height: 1.2; */
 }
 
@@ -222,17 +227,20 @@ a {
     color: currentColor;
     background: white;
     border-radius: var(--size-radius);
-    font-size: 0.85rem;;
+    font-size: 0.85vw;;
     font-weight: bold;
 }
 
 .input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
-    transform: translate(0.25rem, -75%) scale(0.8);
+    transform: translate(0.25vh, -85%) scale(0.8);
     color: var(--orange);
 }
 
 .list {
     position: relative;
+    margin: auto auto;
+    width: 100%;
+    height: 100%;
 }
 
 .list__field {
@@ -245,7 +253,7 @@ a {
     color: currentColor;
     background: white;
     border-radius: var(--size-radius);
-    font-size: 0.85rem;;
+    font-size: 0.85vw;;
     font-weight: bold;
 }
 
@@ -264,6 +272,7 @@ a {
 	 transition: transform 120ms ease-in;
 	 font-weight: bold;
 	 line-height: 1.2;
+     font-size: 0.85vw;
 }
 
 
@@ -271,6 +280,51 @@ a {
     transform: translate(0.5rem, -75%) scale(0.8);
     color: var(--orange);
 }
+
+.textArea {
+    position: relative;
+    margin: auto auto;
+    width: 100%;
+    height: 100%;
+}
+
+.textArea__field {
+    box-sizing: border-box;
+    display: inline;
+    width: 100%;
+    border: 2px solid currentColor;
+    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+    margin: 2% auto;
+    color: currentColor;
+    background: white;
+    border-radius: var(--size-radius);
+    font-size: 0.85vw;;
+    font-weight: bold;
+}
+
+.textArea__label {
+    position: absolute;
+    display: inline;
+	 left: 0;
+	 top: 0;
+	 padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
+	 margin: calc(var(--size-bezel) - 45px) calc(var(--size-bezel) * .5);
+	 background: var(--orange);
+	 white-space: nowrap;
+	 transform: translate(0, 0);
+	 transform-origin: 0 0;
+	 background: white;
+	 transition: transform 120ms ease-in;
+	 font-weight: bold;
+	 line-height: 1.2;
+     font-size: 0.85vw;
+}
+
+.textArea__field:focus + .textArea__label, .textArea__field:not(:placeholder-shown) + .list__label {
+    transform: translate(0.5rem, -125%) scale(0.8);
+    color: var(--orange);
+}
+
 
 .serviço {
     background-color: var(--orange);
