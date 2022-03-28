@@ -1,0 +1,8 @@
+@import url(style.css);
+
+.vantagens {
+    background-color: var(--grey);
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+}

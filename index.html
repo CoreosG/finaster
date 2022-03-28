@@ -7,8 +7,17 @@
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="images/favicon/logo.png">
-    <!-- stylesheet -->
+    <!-- stylesheets -->
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mainSection.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/servico.css">
+    <link rel="stylesheet" href="styles/sobre.css">
+    <link rel="stylesheet" href="styles/vantagens.css">
+    <link rel="stylesheet" href="styles/encontreNos.css">
+
+
     <!-- scripts -->
     <script src="scripts/script.js" defer></script>
     <script src="scripts/forms.js" defer></script>
@@ -21,17 +30,26 @@
                 <div class="navbar" id="navbar">
                     <nav class="menu" id="navBtns">
                         <ul>
-                            <li><a href="#serviço" class="link">Antecipação</a></li>
-                            <li><a href="#vantagens" class="link">Vantagens</a></li>
-                            <li class="logoSpace"><a href="index.html"><img src="./images/sprite/logo.png" alt="finaster_logo" /></a></li>
-                            <li><a href="#sobre" class="link">Sobre a Finaster</a></li>
-                            <li><a href="#encontre-nos" class="link">Encontre-nos</a></li>
-                            <!-- <li><a href="" id="btnEntrar">Entrar</a></li> -->
-                        </ul>
-                        
-                        
+                            <li class="list-main-menu"><a href="#serviço" class="link link-styles">Antecipação</a></li>
+                            <li class="list-main-menu"><a href="#vantagens" class="link link-styles">Vantagens</a></li>
+                            <li class="logoSpace"><a class="link-styles" href="index.html"><img src="./images/sprite/logo.png" alt="finaster_logo" /></a></li>
+                            <li class="list-main-menu"><a href="#sobre" class="link link-styles">Sobre a Finaster</a></li>
+                            <li class="list-main-menu"><a href="#encontre-nos" class="link link-styles">Encontre-nos</a></li>
+                        </ul>   
                     </nav>
-                </div>
+                    <nav class="subMenu" id="navHiddenBtns">
+                        <div id="dropDownListWrapper">
+                            <ul class="dropDownList">
+                                <li><button class="revision btnSimule" onclick="openForm()">Faça uma simulação</button></li>
+                                <li><button class="revision btnSimule" onclick="showLogin()">Entrar</button></li>
+                            </ul> 
+                        </div>
+                        <div class="dropDownMenuBtn">
+                            <input type="checkbox" id="showSubMenu" onchange="showSubMenu()"checked>             
+                            <label for="showSubMenu" id="lblShowSubMenu"><img src="./images/svg/setaCima.svg" alt="botão seta do subMenu" id="doubleArrowImg"> </label>
+                        </div>
+                    </nav>
+                </div>  
                 <article class="banner-title">
                     <h1>Vendeu a prazo, mas precisa do dinheiro <span class="orangeText">hoje?</span></h1>
                     <h3>Antecipamos suas duplicatas e pagamos à vista para sua empresa.</h3>

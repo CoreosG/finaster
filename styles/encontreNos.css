@@ -1,0 +1,9 @@
+@import url(style.css);
+
+
+.encontre-nos {
+    background-color: var(--grey);
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+}

@@ -1,0 +1,163 @@
+@import url(style.css);
+
+.menu{
+    width: 100vw;
+    height: auto;
+    border-bottom: 1px solid rgba(240,255,255,0.1);
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.list-main-menu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    height: auto;
+}
+
+.link-styles {
+    /* color: var(--orange); */
+    display: block;
+    position: relative;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(1vw + 0.3rem);
+}
+
+.navbar {
+    position: relative;
+    z-index: 10;
+    text-decoration: none;
+    color: transparent;
+    background-color: rgba(240,255,255,0.1);
+    height: auto;
+}
+
+
+.subMenu {
+    display: block;
+    z-index: 9;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.dropDownListWrapper {
+    background-color: rgba(3, 3, 3, 0.87);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    display: none;
+
+}
+
+.dropDownList {
+    display: flex;
+    background-color: rgba(3, 3, 3, 0.7);
+    padding: 1rem 0;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+}
+
+.dropDownList > li {
+    margin: 0 1.2rem;
+}
+
+.dropDownList > li > button {
+    padding: 0.65rem 1rem;
+}
+
+
+
+/* Elements inside menu */
+.logoSpace > a > img{
+    width: calc(9vw + 4rem);
+    padding-top: 2%;
+}
+
+.logoSpace {
+margin-left: 5%;
+margin-right: 3%;
+}
+
+
+.dropDownMenuBtn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#showSubMenu {
+    display: none;
+    border: none;
+    position: absolute;
+}
+
+.dropDownMenuBtn > label > img {
+    width: calc(1vw + 1rem);
+}
+
+#btnEntrar {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--orange);
+    padding: 0.7rem 2.2rem;
+    border-radius: 0.4em;
+}
+
+
+/* i'm dumb but anyways, above A tag is the link class */
+/* Behaviour */
+
+.link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--orange);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.link:hover::after,
+.link:focus::after {
+    cursor: pointer;
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+.link::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+  }
+  
+.link:hover::after,
+.link:focus::after{
+    transform: scale(1);
+  }
+
+#doubleArrowImg:hover {
+    cursor: pointer;
+}
+
+
+/* Media queries */
+@media screen and (max-width: 1023px) {
+    .link {
+        display: none;
+    }
+}
