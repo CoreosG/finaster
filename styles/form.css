@@ -7,37 +7,70 @@
     font-family: 'Roboto Slab', serif;
     border-radius: 0.4em;
     display: block;
-    position: relative;
+    clear: both;
+    position: sticky;
+    z-index: 99;
     justify-content: center;
     align-items: center;
+    top: 0;
     z-index: 9;
-    top: 40%;
-    left: 56%;
-    width: 32vw;
-    height: 70vh;
+    width: 100vw;
+    height: 100vh;
 }
 
 .form-text-wrapper {
-    position: absolute;
+    position: relative;
+    top: 1%;
+    width: 100%;
     font-size: 0.85rem;
     text-align: center;
+    align-content: center;
     margin: 3% 3%;
 }
 
 .form-wrapper {
-    position: absolute;
-    width: 90%;
-    margin-top: 17%;
-    margin-left: 5%;
-    margin-right: 5%;
+    position: relative;
+    width: 100vw;
+    height: auto;
 }
 
+.formFields {
+    position: absolute;
+    margin: 0 auto;
+}
 
+.formTextFieldArea {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+}
+
+.formList {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.formLargeText {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.form-c1, .form-c2, .form-c3 {
+    width: 100%;
+    display: flex;
+}
 /* related to the input elements */
 
 .input {
     position: relative;
-    margin: auto auto;
+    width: 100%;
+    margin: 0 2rem;
 }
 
 .input__label {
@@ -46,13 +79,14 @@
 	 left: 0;
 	 top: 0;
 	 padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
-	 margin: calc(var(--size-bezel) - 0.55rem) calc(var(--size-bezel) * .70);
+	 margin: calc(var(--size-bezel) * 2.25) calc(var(--size-bezel) * .70);
 	 background: var(--orange);
 	 white-space: nowrap;
 	 transform: translate(0, 0);
 	 transform-origin: 0 0;
 	 background: white;
 	 transition: transform 120ms ease-in;
+     font-size: 0.85rem;
 	 font-weight: bold;
 	 /* line-height: 1.2; */
 }
@@ -74,7 +108,7 @@
 /* input element behaviour */
 
 .input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
-    transform: translate(0.25rem, -75%) scale(0.8);
+    transform: translate(0.25rem, -55%) scale(0.8);
     color: var(--orange);
 }
 
@@ -117,5 +151,50 @@
 /* list behaviour */
 .list__field:focus + .list__label, .list__field:not(:placeholder-shown) + .list__label {
     transform: translate(0.5rem, -75%) scale(0.8);
+    color: var(--orange);
+}
+
+/* textArea */
+.textArea {
+    position: relative;
+    margin: auto auto;
+}
+
+.textArea__label {
+    position: absolute;
+    display: inline;
+	 left: 0;
+	 top: 0;
+	 padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
+	 margin: calc(var(--size-bezel) - 4.3rem) calc(var(--size-bezel) * .70);
+	 background: var(--orange);
+	 white-space: nowrap;
+	 transform: translate(0, 0);
+	 transform-origin: 0 0;
+	 background: white;
+	 transition: transform 120ms ease-in;
+	 font-weight: bold;
+	 /* line-height: 1.2; */
+}
+
+.textArea__field {
+    box-sizing: border-box;
+    display: inline;
+    resize: none;
+    width: 100%;
+    border: 2px solid currentColor;
+    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+    margin: 2% auto;
+    color: currentColor;
+    background: white;
+    border-radius: var(--size-radius);
+    font-size: 0.85rem;;
+    font-weight: bold;
+}
+
+/* textArea element behaviour */
+
+.textArea__field:focus + .textArea__label, .textArea__field:not(:placeholder-shown) + .input__label {
+    transform: translate(0.25rem, -125%) scale(0.8);
     color: var(--orange);
 }

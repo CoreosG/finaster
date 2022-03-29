@@ -1,8 +1,9 @@
 @import url(style.css);
 
-.vantagens {
-    background-color: var(--grey);
+
+.antecipação {
+    background-color: var(--orange);
     position: relative;
     width: 100vw;
-    height: 120vh;
-}
+    height: 100vh;
+}   

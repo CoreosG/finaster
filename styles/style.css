@@ -9,6 +9,9 @@
     --size-radius: 4px;
 
     font-size: (0.6rem + 0.4vw);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 
@@ -32,19 +35,18 @@ ul {
     justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#scrollToTopBtn {
+    background-color: var(--orange);
+    position: fixed;
+    bottom: -300px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 3rem;
+    transition: all 0.3s ease;
+}

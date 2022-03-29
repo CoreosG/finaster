@@ -11,8 +11,8 @@
 }
 
 .container {
-    display: block;
-    position: relative;
+    display: table-cell;
+    position: absolute;
     height: 100%;
     justify-content: center;
 }
@@ -20,9 +20,10 @@
 /* Elements inside mainSection */
 
 .simule {
-    position: relative;
+    position: absolute;
     width: 100%;
-    margin-top: calc(5vh + 2%);
+    vertical-align: bottom;
+    bottom: 5%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -48,9 +49,9 @@
     background-color: rgba(0, 0, 0, 0.5);
     text-shadow: 1px 1px var(--orange);
     display: flexbox;
-    margin-top: calc(5vh + 10%);
-    /* margin-top: 17%; */
-    position: relative;
+    bottom: 40%;
+    width: 100%;
+    position: absolute;
     text-align: center;
 }
 

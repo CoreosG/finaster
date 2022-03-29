@@ -12,15 +12,21 @@
     <link rel="stylesheet" href="styles/mainSection.css">
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="styles/form.css">
-    <link rel="stylesheet" href="styles/servico.css">
-    <link rel="stylesheet" href="styles/sobre.css">
     <link rel="stylesheet" href="styles/vantagens.css">
+    <link rel="stylesheet" href="styles/sobre.css">
+    <link rel="stylesheet" href="styles/antecipação.css">
     <link rel="stylesheet" href="styles/encontreNos.css">
 
 
     <!-- scripts -->
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+    </script>
     <script src="scripts/script.js" defer></script>
     <script src="scripts/forms.js" defer></script>
+
     <title>Finaster | Assessoria Financeira</title>
 </head>
 <body>
@@ -30,11 +36,11 @@
                 <div class="navbar" id="navbar">
                     <nav class="menu" id="navBtns">
                         <ul>
-                            <li class="list-main-menu"><a href="#serviço" class="link link-styles">Antecipação</a></li>
-                            <li class="list-main-menu"><a href="#vantagens" class="link link-styles">Vantagens</a></li>
+                            <li class="list-main-menu"><a href="#" class="link link-styles" id="btnAntecipação">Antecipação</a></li>
+                            <li class="list-main-menu"><a href="#" class="link link-styles" id="btnVantagens">Vantagens</a></li>
                             <li class="logoSpace"><a class="link-styles" href="index.html"><img src="./images/sprite/logo.png" alt="finaster_logo" /></a></li>
-                            <li class="list-main-menu"><a href="#sobre" class="link link-styles">Sobre a Finaster</a></li>
-                            <li class="list-main-menu"><a href="#encontre-nos" class="link link-styles">Encontre-nos</a></li>
+                            <li class="list-main-menu"><a href="#" class="link link-styles" id="btnSobre">Sobre a Finaster</a></li>
+                            <li class="list-main-menu"><a href="#" class="link link-styles" id="btnEncontreNos">Encontre-nos</a></li>
                         </ul>   
                     </nav>
                     <nav class="subMenu" id="navHiddenBtns">
@@ -57,74 +63,11 @@
                 <div class="simule">
                     <button class="btnSimule" onclick="openForm()">Clique aqui e simule agora mesmo</button>
                 </div>
-                <!-- <div id="form">
-                    <div class="form-text-wrapper">
-                        <h1>Preencha os dados abaixo e receba uma simulação de antecipação de <span style="color: var(--orange)">GRAÇA!</span></h1>
-                    </div>
-                    <div class="form-wrapper">
-                        <form action="./scripts/forms.js" id="elForm" method="POST">
-                            <div id="formFields">
-                                <div class="formTextFieldArea">
-                                    <div class="form-c1">
-                                        <label class="input">
-                                            <input type="text" class="input__field" name="nome" id="nome" placeholder=" " required></input>
-                                            <span class="input__label">Seu Nome</span>
-                                        </label>
-                                        <label class="input">
-                                            <input type="text" class="input__field" name="Email" id="email" placeholder=" " required ></input>
-                                            <span class="input__label">Email para contato</span>    
-                                        </label>
-                                    </div>
-                                    <div class="form-c2">
-                                        <label class="input">
-                                            <input type="text" class="input__field" name="nomeEmpresa" id="nomeEmpresa"  placeholder=" " required></input>
-                                            <span class="input__label">Nome da Empresa</span>
-                                        </label>
-                                        <label class="input">
-                                            <input type="text" class="input__field" name="ramo" id="ramo" placeholder=" " required></input>
-                                            <span class="input__label">Ramo de Atividade</span>
-                                        </label>
-                                    </div>
-                                    <div class="form-c3">
-                                        <label class="input" id="lblCNPJ">
-                                            <input type="text" class="input__field" id="CNPJ" placeholder=" " required></input>
-                                            <span class="input__label">CNPJ</span>
-                                        </label>
-                                        <label class="input" id="lblTelefone">
-                                            <input type="text" class="input__field" name="telefone" id="telefone" placeholder=" " required></input>
-                                            <span class="input__label">Telefone</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="formList">
-                                    <label class="list">
-                                            <input list="optFaturamento" name="faturamento" class="list__field" id="faturamento" placeholder=" " required />
-                                            <span class="list__label">Faturamento médio mensal</span>
-    
-                                        <datalist id="optFaturamento">
-                                            <option value="50">Até 50mil</option>
-                                            <option value="100">De 50mil a 100mil</option>
-                                            <option value="100">De 50mil a 100mil</option>
-                                        </datalist>
-                                    </label>
-                                </div>
-                                <div class="formlargeText">
-                                    <label class="textArea">
-                                            <textarea class="textArea__field" id="mensagem" placeholder=" " maxlength="200"></textarea>
-                                            <span class="textArea__label">Digite sua mensagem aqui</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    
-                    
-                </div> -->
             </div>
             
         </section>
-        <section class="serviço" id="serviço">
-            <div class="wrapper-serviço">
+        <section class="antecipação" id="antecipação">
+            <div class="wrapper-antecipação">
                 <h1>Olá mundo</h1>
             </div>
         </section>
@@ -143,6 +86,75 @@
                 <h1>Olá mundo encontre-nos</h1>
             </div>
         </section>
+        <div id="form">
+            <div class="form-text-wrapper">
+                <h1>Preencha os dados abaixo e receba uma simulação de antecipação de <span style="color: var(--orange)">GRAÇA!</span></h1>
+            </div>
+            <div class="form-wrapper">
+                <form action="./scripts/forms.js" id="elForm" method="POST">
+                    <div id="formFields">
+                        <div class="formTextFieldArea">
+                            <div class="form-c1">
+                                <label class="input">
+                                    <input type="text" class="input__field" name="nome" id="nome" placeholder=" " required></input>
+                                    <span class="input__label">Seu Nome</span>
+                                </label>
+                                <label class="input">
+                                    <input type="text" class="input__field" name="Email" id="email" placeholder=" " required ></input>
+                                    <span class="input__label">Email para contato</span>    
+                                </label>
+                            </div>
+                            <div class="form-c2">
+                                <label class="input">
+                                    <input type="text" class="input__field" name="nomeEmpresa" id="nomeEmpresa"  placeholder=" " required></input>
+                                    <span class="input__label">Nome da Empresa</span>
+                                </label>
+                                <label class="input">
+                                    <input type="text" class="input__field" name="ramo" id="ramo" placeholder=" " required></input>
+                                    <span class="input__label">Ramo de Atividade</span>
+                                </label>
+                            </div>
+                            <div class="form-c3">
+                                <label class="input" id="lblCNPJ">
+                                    <input type="text" class="input__field" id="CNPJ" placeholder=" " required></input>
+                                    <span class="input__label">CNPJ</span>
+                                </label>
+                                <label class="input" id="lblTelefone">
+                                    <input type="text" class="input__field" name="telefone" id="telefone" placeholder=" " required></input>
+                                    <span class="input__label">Telefone</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="formList">
+                            <div class="helperCenter">
+                                <label class="list">
+                                    <input list="optFaturamento" name="faturamento" class="list__field" id="faturamento" placeholder=" " required />
+                                    <span class="list__label">Faturamento médio mensal</span>
+
+                                <datalist id="optFaturamento">
+                                    <option value="50">Até 50mil</option>
+                                    <option value="100">De 50mil a 100mil</option>
+                                    <option value="100">De 50mil a 100mil</option>
+                                </datalist>
+                            </label>
+                            </div>
+                        </div>
+                        <div class="formlargeText">
+                            <div class="helperCenter">
+                                <label class="textArea">
+                                <textarea class="textArea__field" id="mensagem" placeholder=" " maxlength="200"></textarea>
+                                <span class="textArea__label">Digite sua mensagem aqui</span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            
+        </div>
+        <button id="scrollToTopBtn">⏫</button>
     </main>
 </body>
 </html>
