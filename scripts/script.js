@@ -49,9 +49,7 @@ window.onscroll = function() {
             showSubMenu();
             globalVars.togglePageStyle = false;
             toggleScrollToTopBtn(true);
-        }
-        
-    } else {
+        } else {
         if(!globalVars.togglePageStyle) {
             toggleMenuStyles(true);
             elements.showSubMenu.checked = false;
@@ -60,8 +58,6 @@ window.onscroll = function() {
             toggleScrollToTopBtn(false);
         }
     }
-
-}
 
 // Style togglers
 //Navbar
