@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal inscrição</title>
+
+    <style>
+      :root {
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 2rem;
+        --space-l: 2.5rem;
+        --space-xl: 5rem;
+        --primary-color: #ff6600;
+        --gray-900: hsl(24, 3%, 24%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #f2f2f2;
+        display: grid;
+        place-content: center;
+        padding: var(--space-sm);
+      }
+
+      .modalWrapper {
+        max-width: 640px;
+      }
+
+      .title {
+        color: var(--gray-900);
+        font: 400 2rem/ 2.5rem Arial, sans-serif;
+        margin-bottom: var(--space-md);
+        margin-top: var(--space-l);
+      }
+
+      .formSimulation__header {
+        align-items: center;
+        display: grid;
+        grid-template-columns: [title] 1fr 1rem;
+      }
+
+      .formSimulation__title {
+        color: var(--gray-900);
+        font: 700 1.5rem/ 2.5rem Arial;
+        grid-column: title;
+        padding-top: var(--space-md);
+        text-transform: uppercase;
+      }
+
+      .buttonClose {
+        align-self: flex-start;
+        background-color: rgb(230, 103, 103);
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+      }
+
+      .modalWrapper .title {
+        text-align: center;
+      }
+
+      .title .emphasis {
+        color: var(--primary-color);
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .formSimulation {
+        background-color: #f9f9f9;
+        border-radius: calc(var(--space-sm) / 2);
+        border: 1px solid #e1e1e1;
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--space-sm) / 2);
+        padding: var(--space-md);
+      }
+
+      .inputField {
+        /* gap: calc(var(--space-sm) / 2); */
+        background-color: #fff;
+        border-radius: inherit;
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        padding: var(--space-sm);
+      }
+
+      .inputField__definition {
+        color: #868686;
+        font: 700 10px/ 20px Arial, sans-serif;
+        letter-spacing: 1.5px;
+        margin-bottom: calc(var(--space-sm) / 2);
+        text-transform: uppercase;
+      }
+
+      .inputField input {
+        border: none;
+        color: #5a5a5a;
+        font-size: 1.125rem;
+        outline: none;
+        padding: var(--space-sm);
+      }
+
+      .inputField input::placeholder {
+        color: #c9c9c9;
+      }
+
+      .--js-inputActive {
+        border-color: var(--primary-color);
+      }
+      .--js-inputActive span {
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modalWrapper">
+      <p class="title">
+        Preencha os dados abaixo e receba uma simulação de antecipação de
+        <span class="emphasis">GRAÇA</span>!
+      </p>
+
+      <form class="formSimulation" id="first-stage" action="/" method="get">
+        <div class="formSimulation__header">
+          <p class="formSimulation__title">Informe alguns dados</p>
+          <a href="#" class="buttonClose"></a>
+        </div>
+
+        <label class="inputField" for="personName">
+          <span class="inputField__definition">Seu nome</span>
+          <input
+            type="text"
+            name="personName"
+            id="personName"
+            class="input"
+            placeholder="Informe seu nome"
+          />
+        </label>
+
+        <label class="inputField" for="userFantasyName">
+          <span class="inputField__definition">Nome da empresa</span>
+          <input
+            type="text"
+            name="userFantasyName"
+            id="userFantasyName"
+            class="input"
+            placeholder="Nome da empresa"
+          />
+        </label>
+
+        <label class="inputField" for="userCNPJ">
+          <span class="inputField__definition">CNPJ</span>
+          <input
+            type="text"
+            name="userCNPJ"
+            id="userCNPJ"
+            class="input"
+            placeholder="CNPJ"
+          />
+        </label>
+      </form>
+    </div>
+    <script>
+      const inputField = document.querySelectorAll('.inputField')
+
+      inputField.forEach(el => {
+        el.addEventListener('click', () => {
+          el.classList.toggle('--js-inputActive')
+        })
+      })
+
+      //=====================================
+      //Evento de fechar
+      const modalClose = document.querySelector('.buttonClose')
+      const cancelEvent = el => el.preventDefault()
+      modalClose.addEventListener('click', cancelEvent)
+
+      modalClose.addEventListener('click', () => {
+        let verification = confirm(
+          'Você deseja mesmo fechar o formulário de cadastro?'
+        )
+        // remover a classe que torna o modal ativo
+      })
+    </script>
+  </body>
+</html>
