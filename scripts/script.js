@@ -70,6 +70,7 @@ function toggleMenuStyles(toggle){
     if (toggle) {
         elements.navbar.style.position = "fixed";
         elements.navbar.style.backgroundColor = "white";
+        elements.navbar.style.width = "100%";
         // elements.navbar.style.boxShadow = "0px 10px var(--orange)";
         globalVars.dropDownList = false;
         aTagsNavBar.forEach(link => { link.style.color = "var(--black)"; })
@@ -102,3 +103,4 @@ function showSubMenu() {
         elements.doubleArrowImg.src = "./images/svg/setaBaixo.svg";
     }
 }
+

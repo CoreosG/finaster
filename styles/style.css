@@ -10,7 +10,8 @@
 
     font-size: (0.6rem + 0.4vw);
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    max-width: 100%;
+    overflow-x: visible;
     overflow-y: scroll;
 }
 
@@ -49,4 +50,22 @@ ul {
     line-height: 3rem;
     width: 3rem;
     transition: all 0.3s ease;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:20px;
+	right:20px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
 }

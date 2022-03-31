@@ -8,6 +8,7 @@
     <!-- favicon -->
     <link rel="icon" type="image/png" href="images/favicon/logo.png">
     <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/mainSection.css">
     <link rel="stylesheet" href="styles/menu.css">
@@ -146,7 +147,22 @@
                                 <span class="textArea__label">Digite sua mensagem aqui</span>
                                 </label>
                             </div>
-                            
+                        </div>
+                        <div class="formCheckbox">
+                            <input type="checkbox" id="ToS" required />
+                            <span class="ToS__label"> Você concorda com os nossos <a href="">Termos de Uso</a>?</span>
+                        </div>
+                        <div class="formEnviarBtn">
+                            <button class="submitBtn">Enviar</button>
+  
+                            <div class="loader hidden">
+                                <div class="check">
+                                <span class="check-one"></span>
+                                <span class="check-two"></span>
+                            </div>
+                        </div>
+                        <div class="bottomTextWrapper">
+                            <span class="bottomText">OU</span>
                         </div>
                     </div>
                 </form>
@@ -155,6 +171,9 @@
             
         </div>
         <button id="scrollToTopBtn">⏫</button>
+        <a href="https://api.whatsapp.com/send?phone=5513997112599&text=Ol%C3%A1%2C+vim+pelo+site+da+%2A%2AFinaster%2A%2A+e+gostaria+de+mais+informa%C3%A7%C3%B5es%21" class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
     </main>
 </body>
 </html>
