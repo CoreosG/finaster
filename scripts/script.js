@@ -13,9 +13,14 @@ let elements = {
     dropDownListWrapper: document.getElementById("dropDownListWrapper"),
     doubleArrowImg: document.getElementById("doubleArrowImg"),
     showSubMenu: document.getElementById("showSubMenu"),
-    scrollToTopBtn: document.getElementById("scrollToTopBtn")
+    scrollToTopBtn: document.getElementById("scrollToTopBtn"),
+    whatsappBtn: document.getElementById("whatsappBtn"),
+    lblShowSubMenu: document.getElementById("lblShowSubMenu"),
 };
-let globalVars = {};
+let globalVars = {
+    mainSectionVisible: true,
+    modalOpened: false
+};
 
 //Listeners
 $("#scrollToTopBtn").click(function() {
@@ -38,7 +43,12 @@ $("#btnAntecipação").click(function() {
 });
 
 window.onscroll = function() {
-    let currentScrollPos = window.scrollY;
+
+    mainSectionVisible();
+}
+
+// Change on mainSectionVisible
+function mainSectionVisible(){
     let mainSectionY = elements.mainSection.getBoundingClientRect().bottom;
     globalVars.mainSectionVisible = mainSectionY > 0;
 
@@ -48,6 +58,7 @@ window.onscroll = function() {
             elements.showSubMenu.checked = true;
             showSubMenu();
             globalVars.togglePageStyle = false;
+
             toggleScrollToTopBtn(true);
         }
         
@@ -57,13 +68,14 @@ window.onscroll = function() {
             elements.showSubMenu.checked = false;
             showSubMenu()
             globalVars.togglePageStyle = true;
-            toggleScrollToTopBtn(false);
+            if(!globalVars.modalOpened){
+                toggleScrollToTopBtn(false);
+                toggleWhatsappBtn(false);
+            }
         }
     }
-
 }
 
-// Style togglers
 //Navbar
 function toggleMenuStyles(toggle){
     let aTagsNavBar = document.querySelectorAll(".link");
@@ -83,12 +95,19 @@ function toggleMenuStyles(toggle){
 //toggle scrollToTopBtn
 function toggleScrollToTopBtn(toggle) {
     if(toggle) {
-        elements.scrollToTopBtn.style.bottom = "-300px"
+        elements.scrollToTopBtn.style.right = "-300px"
     } else {
-        elements.scrollToTopBtn.style.bottom = "20px"
+        elements.scrollToTopBtn.style.right = "20px"
     }
 }
-
+//toggle whatsappBtn
+function toggleWhatsappBtn(toggle) {
+    if(toggle) {
+        elements.whatsappBtn.style.bottom = "-300px";
+    } else {
+        elements.whatsappBtn.style.bottom = "20px";
+    }
+}
 //menu
 
 
@@ -104,3 +123,41 @@ function showSubMenu() {
     }
 }
 
+//toggleForm
+function toggleForm() {
+    if(elements.form.classList.contains('hidden')) {
+        elements.form.classList.remove('hidden');
+        elements.form.style.position = "sticky";
+        toggleScrollToTopBtn(true)
+        toggleWhatsappBtn(true)
+        globalVars.modalOpened = true;
+        setTimeout(function(){
+            openModal();
+        }, 50);
+    } else {
+        closeModal()
+        setTimeout(function() {
+            elements.form.classList.add('hidden');
+            elements.form.style = "";
+        }, 50);
+        globalVars.modalOpened = false;
+        if(!globalVars.mainSectionVisible){
+            toggleScrollToTopBtn(false)   
+        }
+        toggleWhatsappBtn(false)
+    }
+}
+
+//form Animation
+function openModal() {
+    if(globalVars.mainSectionVisible) {
+        elements.form.style.bottom = "0px";
+
+    }
+}
+
+function closeModal() {
+    if(globalVars.mainSectionVisible) {
+        elements.form.style.bottom = "-2000px";
+    }
+}
