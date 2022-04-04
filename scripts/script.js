@@ -99,7 +99,7 @@ function toggleScrollToTopBtn(toggle) {
     if(toggle) {
         elements.scrollToTopBtn.style.right = "-300px"
     } else {
-        elements.scrollToTopBtn.style.right = "20px"
+        elements.scrollToTopBtn.style.right = "1.5%"
     }
 }
 //toggle whatsappBtn
@@ -156,8 +156,6 @@ function openModal() {
         elements.form.style.bottom = "0px";
     }
     //todo: fazer scroll do modal
-    if(window.innerHeight >= 635)
-        elements.body.style.overflow = "hidden";
 }
 
 function closeModal() {

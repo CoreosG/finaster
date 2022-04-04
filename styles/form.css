@@ -112,11 +112,13 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    width: 100%;
 }
 
 #ToS {
     position: relative;
     display: inline;
+    
     justify-content: center;
     align-content: center;
     background-color: white;
@@ -130,16 +132,18 @@
        height: 1.15em;
        border: 0.15em solid currentColor;
        border-radius: 0.15em;
-       transform: translateY(-0.075em);
+       transform: translateY(45%);
        display: grid;
        place-content: center;
 }
 
 .ToS__label {
-    font-size: calc(0.6rem + .4vw);
+    font-size: 1rem;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
-    margin-left: .5%;
+    text-align: center;
+    /* line-height: .2px; */
+    margin: .5%;
 }
 
 #ToS::before {
@@ -302,142 +306,144 @@
 .input {
     position: relative;
     width: 100%;
-    height: auto;
-    margin: 0 1%;
-}
-
-.input__label {
+    margin: .75rem 1%;
+  }
+  .input__label {
     position: absolute;
-    display: inline;
-	 left: 0;
-	 top: 0;
-	 padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
-	 margin: calc(var(--size-bezel) * 2.25) calc(var(--size-bezel) * .70);
-	 background: var(--orange);
-	 white-space: nowrap;
-	 transform: translate(0, 0);
-	 transform-origin: 0 0;
-	 background: transparent;
-	 transition: all 120ms ease-in;
-     font-size: calc(0.85rem * 0.95);
-	 font-weight: bold;
-	 /* line-height: 1.2; */
-}
-
-.input__field {
+    left: 0;
+    top: 0;
+    padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+    margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: transparent;
+    transition: transform 120ms ease-in;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .input__field {
     box-sizing: border-box;
-    display: inline;
+    display: block;
     width: 100%;
     border: 2px solid currentColor;
     padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
-    margin: 2% auto;
     color: currentColor;
-    background: white;
+    background: transparent;
     border-radius: var(--size-radius);
-    font-size: 0.85rem;
-    font-weight: bold;
-}
-
-/* input element behavior */
-
-.input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
+    font-size: calc(0.6rem + 0.4vw);
+  }
+  .input__field:not(:-moz-placeholder-shown) + .input__label {
     transform: translate(0.25rem, -65%) scale(0.8);
-    color: var(--orange);
-    background: white;
-}
+  background: white;
+  color: var(--orange);
+  }
+  .input__field:not(:-ms-input-placeholder) + .input__label {
+    transform: translate(0.25rem, -65%) scale(0.8);
+  background: white;
+  color: var(--orange);
+  }
+  .input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
+    transform: translate(0.25rem, -65%) scale(0.8);
+  background: white;
+  color: var(--orange);
+  }
 
 /* related to the list elements */
 .list {
     position: relative;
     width: 98%;
-}
-
-.list__field {
+    margin: 2% 0;
+  }
+  .list__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+    margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: transparent;
+    transition: transform 120ms ease-in;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .list__field {
     box-sizing: border-box;
-    display: inline;
+    display: block;
     width: 100%;
     border: 2px solid currentColor;
     padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
-    /* margin: 2% auto; */
     color: currentColor;
-    background: transpa;
+    background: transparent;
     border-radius: var(--size-radius);
-    font-size: 0.85rem;
-    font-weight: bold;
-}
+    font-size: calc(0.6rem + 0.4vw);
 
-.list__label {
-    position: absolute;
-    display: inline;
-	 left: 0;
-	 top: 0;
-	 padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
-	 margin: calc(var(--size-bezel) * 0.5) calc(var(--size-bezel) * .70);
-	 background: var(--orange);
-	 white-space: nowrap;
-	 transform: translate(0, 0);
-	 transform-origin: 0 0;
-	 background: transparent;
-	 transition: all 120ms ease-in;
-     font-size: calc(0.85rem * 0.95);
-	 font-weight: bold;
-	 line-height: 1.2;
-}
-
-/* list behavior */
-.list__field:focus + .list__label, .list__field:not(:placeholder-shown) + .list__label {
-    transform: translate(0.5rem, -65%) scale(0.8);
-    color: var(--orange);
-    background: white;
-}
+  }
+  .list__field:not(:-moz-placeholder-shown) + .list__label {
+    transform: translate(0.25rem, -65%) scale(0.8);
+  background: white;
+  color: var(--orange);
+  }
+  .list__field:not(:-ms-list-placeholder) + .list__label {
+    transform: translate(0.25rem, -65%) scale(0.8);
+  background: white;
+  color: var(--orange);
+  }
+  .list__field:focus + .list__label, .list__field:not(:placeholder-shown) + .list__label {
+    transform: translate(0.25rem, -65%) scale(0.8);
+  background: white;
+  color: var(--orange);
+  }
 
 /* textArea */
 .textArea {
     position: relative;
     width: 98%;
-    height: auto;
-    margin: auto auto;
+    margin: 2% 0;
 }
-
 .textArea__label {
-    position: absolute;
-    display: inline;
-	 left: 0;
-	 top: 0;
-	 padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
-	 margin: calc(var(--size-bezel) * 3.8) calc(var(--size-bezel) * .70);
-	 background: var(--orange);
-	 white-space: nowrap;
-	 transform: translate(0, 0);
-	 transform-origin: 0 0;
-	 background: transparent;
-	 transition: all 120ms ease-in;
-     font-size: calc(0.85rem * 0.95);
-	 font-weight: bold;
-	 /* line-height: 1.2; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+  margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  background: transparent;
+  transition: transform 120ms ease-in;
+  font-weight: bold;
+  line-height: 1.2;
 }
-
 .textArea__field {
-    box-sizing: border-box;
-    display: inline;
-    resize: none;
-    width: 100%;
-    border: 2px solid currentColor;
-    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
-    margin: 2% auto;
-    color: currentColor;
-    background: white;
-    border-radius: var(--size-radius);
-    font-size: 0.85rem;;
-    font-weight: bold;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 2px solid currentColor;
+  padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+  color: black;
+  background: transparent;
+  border-radius: var(--size-radius);
+  resize: none;
+  font-size: calc(0.6rem + 0.4vw);
+
 }
-
-/* textArea element behavior */
-
+.textArea__field:not(:-moz-placeholder-shown) + .textArea__label {
+  transform: translate(0.25rem, -65%) scale(0.8);
+  background: white;
+  color: var(--orange);
+}
+.textArea__field:not(:-ms-textArea-placeholder) + .textArea__label {
+  transform: translate(0.25rem, -65%) scale(0.8);
+  background: white;
+  color: var(--orange);
+}
 .textArea__field:focus + .textArea__label, .textArea__field:not(:placeholder-shown) + .textArea__label {
-    transform: translate(0.25rem, -45%) scale(0.8);
-    color: var(--orange);
-    background: white;
+  transform: translate(0.25rem, -65%) scale(0.8);
+  background: white;
+  color: var(--orange);
 }
 
 /* form whatsapp */
@@ -479,113 +485,18 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 1280px) {
 
-    .form-text-wrapper {
-        position: relative;
-        top: 1%;
-        width: 100%;
-        font-size: 0.5rem;
-        text-align: center;
-        align-content: center;
-        margin: 1% 0 2% 0;
-    }
+@media screen and (max-width: 1024px) {
 
-    .input__label, .list__label, .textArea__label {
-        background: none;
-    }
-
-    .form-c1, .form-c2, .form-c3 {
-        width: 100%;
-        display: flexbox;
-        margin: 1% 0;
-    }
-
-    .list {
-        position: relative;
-        width: 100%;
-        margin: 1% 1%;
-    }
-
-    .textArea {
-        position: relative;
-        width: 100%;
-        margin: 1% 1%;
-    }
-
-
-    .input__label {
-        position: absolute;
-        display: inline;
-         left: 0;
-         top: 0;
-         padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
-         margin: calc(var(--size-bezel) * 1) calc(var(--size-bezel) * .70);
-         background: var(--orange);
-         white-space: nowrap;
-         transform: translate(0, 0);
-         transform-origin: 0 0;
-         background: transparent;
-         transition: all 120ms ease-in;
-         font-size: calc(0.85rem * 0.95);
-         font-weight: bold;
-         /* line-height: 1.2; */
-    }
-
-    .list__label {
-        position: absolute;
-        display: inline;
-         left: 0;
-         top: 0;
-         padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
-         margin: calc(var(--size-bezel) * 1) calc(var(--size-bezel) * .70);
-         background: var(--orange);
-         white-space: nowrap;
-         transform: translate(0, 0);
-         transform-origin: 0 0;
-         background: transparent;
-         transition: all 120ms ease-in;
-         font-size: calc(0.85rem * 0.95);
-         font-weight: bold;
-         line-height: 1.2;
-    }
-
-    .textArea__label {
-        position: absolute;
-        display: inline;
-         left: 0;
-         top: 0;
-         padding: calc(var(--size-bezel) * 0.25) calc(var(--size-bezel) * .5);
-         margin: calc(var(--size-bezel) * 2) calc(var(--size-bezel) * .70);
-         background: var(--orange);
-         white-space: nowrap;
-         transform: translate(0, 0);
-         transform-origin: 0 0;
-         background: transparent;
-         transition: all 120ms ease-in;
-         font-size: calc(0.85rem * 0.95);
-         font-weight: bold;
-         /* line-height: 1.2; */
-    }
-
-    .input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
-        transform: translate(0.25rem, -45%) scale(0.8);
-        color: var(--orange);
-        background: white;
-    }
-
-    .list__field:focus + .list__label, .list__field:not(:placeholder-shown) + .list__label {
-        transform: translate(0.5rem, -65%) scale(0.8);
-        color: var(--orange);
-        background: white;
-    }
-
-    .textArea__field:focus + .textArea__label, .textArea__field:not(:placeholder-shown) + .textArea__label {
-        transform: translate(0.25rem, -65%) scale(0.8);
-        color: var(--orange);
-        background: white;
-    }
-    
+  .form-text-wrapper {
+      position: relative;
+      top: 1%;
+      width: 100%;
+      font-size: 0.5rem;
+      text-align: center;
+      align-content: center;
+      margin: 1% 0 2% 0;
+  }
 }
 
 .hidden {
