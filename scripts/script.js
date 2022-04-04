@@ -1,11 +1,12 @@
 
 //banner change image todo
 
-//elements on screen behaviour on scroll
+//elements on screen behavior on scroll
 let prevScrollpos = window.pageYOffset;
 
 let elements = {
     rootElement: document.documentElement,
+    body: document.querySelector("body"),
     mainSection: document.getElementById("mainSection"),
     form: document.getElementById("form"),
     navbar: document.getElementById("navbar"),
@@ -72,6 +73,7 @@ function mainSectionVisible(){
                 toggleScrollToTopBtn(false);
                 toggleWhatsappBtn(false);
             }
+            elements.rootElement.style.web
         }
     }
 }
@@ -152,11 +154,14 @@ function toggleForm() {
 function openModal() {
     if(globalVars.mainSectionVisible) {
         elements.form.style.bottom = "0px";
-
     }
+    //todo: fazer scroll do modal
+    if(window.innerHeight >= 635)
+        elements.body.style.overflow = "hidden";
 }
 
 function closeModal() {
+    elements.body.style = "";
     if(globalVars.mainSectionVisible) {
         elements.form.style.bottom = "-2000px";
     }
