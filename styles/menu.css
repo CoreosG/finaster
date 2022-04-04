@@ -118,9 +118,7 @@ margin-right: 3%;
     border-radius: 0.4em;
 }
 
-
-/* i'm dumb but anyways, above A tag is the link class */
-/* Behaviour */
+/* Behavior */
 
 .link::after{
     content: '';
@@ -162,4 +160,8 @@ margin-right: 3%;
     .link {
         display: none;
     }
+}
+
+.hidden {
+    display: none;
 }
