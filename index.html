@@ -8,6 +8,7 @@
     <!-- favicon -->
     <link rel="icon" type="image/png" href="images/favicon/logo.png">
     <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/mainSection.css">
     <link rel="stylesheet" href="styles/menu.css">
@@ -31,6 +32,10 @@
 </head>
 <body>
     <main>
+        <button id="scrollToTopBtn">⏫</button>
+        <a href="https://api.whatsapp.com/send?phone=5513997112599&text=Ol%C3%A1%2C+vim+pelo+site+da+%2A%2AFinaster%2A%2A+e+gostaria+de+mais+informa%C3%A7%C3%B5es%21" class="float" id="whatsappBtn" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
         <section class="banner" id="mainSection">
             <div class="container">
                 <div class="navbar" id="navbar">
@@ -46,12 +51,12 @@
                     <nav class="subMenu" id="navHiddenBtns">
                         <div id="dropDownListWrapper">
                             <ul class="dropDownList">
-                                <li><button class="revision btnSimule" onclick="openForm()">Faça uma simulação</button></li>
+                                <li><button class="revision btnSimule" onclick="toggleForm()">Faça uma simulação</button></li>
                                 <li><button class="revision btnSimule" onclick="showLogin()">Entrar</button></li>
                             </ul> 
                         </div>
                         <div class="dropDownMenuBtn">
-                            <input type="checkbox" id="showSubMenu" onchange="showSubMenu()"checked>             
+                            <input type="checkbox" id="showSubMenu" onchange="showSubMenu()" checked>             
                             <label for="showSubMenu" id="lblShowSubMenu"><img src="./images/svg/setaCima.svg" alt="botão seta do subMenu" id="doubleArrowImg"> </label>
                         </div>
                     </nav>
@@ -61,7 +66,7 @@
                     <h3>Antecipamos suas duplicatas e pagamos à vista para sua empresa.</h3>
                 </article>
                 <div class="simule">
-                    <button class="btnSimule" onclick="openForm()">Clique aqui e simule agora mesmo</button>
+                    <button class="btnSimule" onclick="toggleForm()">Clique aqui e simule agora mesmo</button>
                 </div>
             </div>
             
@@ -86,7 +91,12 @@
                 <h1>Olá mundo encontre-nos</h1>
             </div>
         </section>
-        <div id="form">
+        <div id="form" class="form hidden">
+            <div class="formBtnClose">
+                <button type="button" class="btnClose" onclick="toggleForm()">
+                    <img src="./images/svg/close.png" alt="fechar formulario"> 
+                </button>
+            </div>
             <div class="form-text-wrapper">
                 <h1>Preencha os dados abaixo e receba uma simulação de antecipação de <span style="color: var(--orange)">GRAÇA!</span></h1>
             </div>
@@ -146,7 +156,31 @@
                                 <span class="textArea__label">Digite sua mensagem aqui</span>
                                 </label>
                             </div>
-                            
+                        </div>
+                        <div class="formCheckbox">
+                            <input type="checkbox" id="ToS" required />
+                            <span class="ToS__label"> Você concorda com os nossos <a href="">Termos de Uso</a>?</span>
+                        </div>
+                        <div class="formEnviarBtn">
+                            <button class="submitBtn">Enviar</button>
+  
+                            <div class="loader hidden">
+                                <div class="check">
+                                <span class="check-one"></span>
+                                <span class="check-two"></span>
+                            </div>
+                        </div>
+                        <div class="bottomTextWrapper">
+                            <span class="bottomText">OU</span>
+                        </div>
+                        <div class="formWhatsapp">
+                
+                            <a href="https://api.whatsapp.com/send?phone=5513997112599&text=Ol%C3%A1%2C+vim+pelo+site+da+%2A%2AFinaster%2A%2A+e+gostaria+de+mais+informa%C3%A7%C3%B5es%21" class="formWhatsappLink" target="_blank"> </a>
+                            <div class="formWhatsappFa">
+                                <i class="fa fa-whatsapp formWhatsappIcon"></i>
+                                <span>Fale diretamente conosco</span>
+                            </div>
+                                
                         </div>
                     </div>
                 </form>
@@ -154,7 +188,7 @@
             
             
         </div>
-        <button id="scrollToTopBtn">⏫</button>
+        
     </main>
 </body>
 </html>

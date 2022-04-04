@@ -1,11 +1,12 @@
 
 //banner change image todo
 
-//elements on screen behaviour on scroll
+//elements on screen behavior on scroll
 let prevScrollpos = window.pageYOffset;
 
 let elements = {
     rootElement: document.documentElement,
+    body: document.querySelector("body"),
     mainSection: document.getElementById("mainSection"),
     form: document.getElementById("form"),
     navbar: document.getElementById("navbar"),
@@ -13,9 +14,14 @@ let elements = {
     dropDownListWrapper: document.getElementById("dropDownListWrapper"),
     doubleArrowImg: document.getElementById("doubleArrowImg"),
     showSubMenu: document.getElementById("showSubMenu"),
-    scrollToTopBtn: document.getElementById("scrollToTopBtn")
+    scrollToTopBtn: document.getElementById("scrollToTopBtn"),
+    whatsappBtn: document.getElementById("whatsappBtn"),
+    lblShowSubMenu: document.getElementById("lblShowSubMenu"),
 };
-let globalVars = {};
+let globalVars = {
+    mainSectionVisible: true,
+    modalOpened: false
+};
 
 //Listeners
 $("#scrollToTopBtn").click(function() {
@@ -38,7 +44,12 @@ $("#btnAntecipação").click(function() {
 });
 
 window.onscroll = function() {
-    let currentScrollPos = window.scrollY;
+
+    mainSectionVisible();
+}
+
+// Change on mainSectionVisible
+function mainSectionVisible(){
     let mainSectionY = elements.mainSection.getBoundingClientRect().bottom;
     globalVars.mainSectionVisible = mainSectionY > 0;
 
@@ -48,24 +59,32 @@ window.onscroll = function() {
             elements.showSubMenu.checked = true;
             showSubMenu();
             globalVars.togglePageStyle = false;
+
             toggleScrollToTopBtn(true);
-        } else {
+        }
+        
+    } else {
         if(!globalVars.togglePageStyle) {
             toggleMenuStyles(true);
             elements.showSubMenu.checked = false;
             showSubMenu()
             globalVars.togglePageStyle = true;
-            toggleScrollToTopBtn(false);
+            if(!globalVars.modalOpened){
+                toggleScrollToTopBtn(false);
+                toggleWhatsappBtn(false);
+            }
+            elements.rootElement.style.web
         }
     }
+}
 
-// Style togglers
 //Navbar
 function toggleMenuStyles(toggle){
     let aTagsNavBar = document.querySelectorAll(".link");
     if (toggle) {
         elements.navbar.style.position = "fixed";
         elements.navbar.style.backgroundColor = "white";
+        elements.navbar.style.width = "100%";
         // elements.navbar.style.boxShadow = "0px 10px var(--orange)";
         globalVars.dropDownList = false;
         aTagsNavBar.forEach(link => { link.style.color = "var(--black)"; })
@@ -78,12 +97,19 @@ function toggleMenuStyles(toggle){
 //toggle scrollToTopBtn
 function toggleScrollToTopBtn(toggle) {
     if(toggle) {
-        elements.scrollToTopBtn.style.bottom = "-300px"
+        elements.scrollToTopBtn.style.right = "-300px"
     } else {
-        elements.scrollToTopBtn.style.bottom = "20px"
+        elements.scrollToTopBtn.style.right = "20px"
     }
 }
-
+//toggle whatsappBtn
+function toggleWhatsappBtn(toggle) {
+    if(toggle) {
+        elements.whatsappBtn.style.bottom = "-300px";
+    } else {
+        elements.whatsappBtn.style.bottom = "20px";
+    }
+}
 //menu
 
 
@@ -96,5 +122,47 @@ function showSubMenu() {
     } else {
         elements.dropDownListWrapper.style.display = "none";
         elements.doubleArrowImg.src = "./images/svg/setaBaixo.svg";
+    }
+}
+
+//toggleForm
+function toggleForm() {
+    if(elements.form.classList.contains('hidden')) {
+        elements.form.classList.remove('hidden');
+        elements.form.style.position = "sticky";
+        toggleScrollToTopBtn(true)
+        toggleWhatsappBtn(true)
+        globalVars.modalOpened = true;
+        setTimeout(function(){
+            openModal();
+        }, 50);
+    } else {
+        closeModal()
+        setTimeout(function() {
+            elements.form.classList.add('hidden');
+            elements.form.style = "";
+        }, 50);
+        globalVars.modalOpened = false;
+        if(!globalVars.mainSectionVisible){
+            toggleScrollToTopBtn(false)   
+        }
+        toggleWhatsappBtn(false)
+    }
+}
+
+//form Animation
+function openModal() {
+    if(globalVars.mainSectionVisible) {
+        elements.form.style.bottom = "0px";
+    }
+    //todo: fazer scroll do modal
+    if(window.innerHeight >= 635)
+        elements.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+    elements.body.style = "";
+    if(globalVars.mainSectionVisible) {
+        elements.form.style.bottom = "-2000px";
     }
 }
