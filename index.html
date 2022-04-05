@@ -1,194 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/fonts/icomoon/style.css">
 
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="images/favicon/logo.png">
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/mainSection.css">
-    <link rel="stylesheet" href="styles/menu.css">
-    <link rel="stylesheet" href="styles/form.css">
-    <link rel="stylesheet" href="styles/vantagens.css">
-    <link rel="stylesheet" href="styles/sobre.css">
-    <link rel="stylesheet" href="styles/antecipação.css">
-    <link rel="stylesheet" href="styles/encontreNos.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
 
-    <!-- scripts -->
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous">
-    </script>
-    <script src="scripts/script.js" defer></script>
-    <script src="scripts/forms.js" defer></script>
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="icon" type="image/png" href="/images/favicon/logo.png">
 
     <title>Finaster | Assessoria Financeira</title>
-</head>
-<body>
-    <main>
-        <button id="scrollToTopBtn">⏫</button>
-        <a href="https://api.whatsapp.com/send?phone=5513997112599&text=Ol%C3%A1%2C+vim+pelo+site+da+%2A%2AFinaster%2A%2A+e+gostaria+de+mais+informa%C3%A7%C3%B5es%21" class="float" id="whatsappBtn" target="_blank">
-            <i class="fa fa-whatsapp my-float"></i>
-        </a>    
-        <section class="banner" id="mainSection">
-            <div class="container">
-                <div class="navbar" id="navbar">
-                    <nav class="menu" id="navBtns">
-                        <ul>
-                            <li class="list-main-menu"><a href="#" class="link link-styles" id="btnAntecipação">Antecipação</a></li>
-                            <li class="list-main-menu"><a href="#" class="link link-styles" id="btnVantagens">Vantagens</a></li>
-                            <li class="logoSpace"><a class="link-styles" href="index.html"><img src="./images/sprite/logo.png" alt="finaster_logo" /></a></li>
-                            <li class="list-main-menu"><a href="#" class="link link-styles" id="btnSobre">Sobre a Finaster</a></li>
-                            <li class="list-main-menu"><a href="#" class="link link-styles" id="btnEncontreNos">Encontre-nos</a></li>
-                        </ul>   
-                    </nav>
-                    <nav class="subMenu" id="navHiddenBtns">
-                        <div id="dropDownListWrapper">
-                            <ul class="dropDownList">
-                                <li><button class="revision btnSimule" onclick="toggleForm()">Faça uma simulação</button></li>
-                                <li><button class="revision btnSimule" onclick="showLogin()">Entrar</button></li>
-                            </ul> 
-                        </div>
-                        <div class="dropDownMenuBtn">
-                            <input type="checkbox" id="showSubMenu" onchange="showSubMenu()" checked>             
-                            <label for="showSubMenu" id="lblShowSubMenu"><img src="./images/svg/setaCima.svg" alt="botão seta do subMenu" id="doubleArrowImg"> </label>
-                        </div>
-                    </nav>
-                </div>  
-                <article class="banner-title">
-                    <h1>Vendeu a prazo, mas precisa do dinheiro <span class="orangeText">hoje?</span></h1>
-                    <h3>Antecipamos suas duplicatas e pagamos à vista para sua empresa.</h3>
-                </article>
-                <div class="simule">
-                    <button class="btnSimule" onclick="toggleForm()">Clique aqui e simule agora mesmo</button>
-                </div>
-            </div>
-            
-        </section>
-        <section class="antecipação" id="antecipação">
-            <div class="wrapper-antecipação">
-              <h1>Olá mundo antecipação</h1>
-            </div>
-        </section>
-        <section class="vantagens" id="vantagens">
-            <div class="wrapper-vantagens">
-                <h1>Olá mundo vantagens</h1>
-            </div>
-        </section>
-        <section class="sobre" id="sobre">
-            <div class="wrapper-sobre">
-                <h1>Olá mundo sobre</h1>
-            </div>
-        </section>
-        <section class="encontre-nos" id="encontre-nos">
-            <div class="wrapper-encontre-nos">
-                <h1>Olá mundo encontre-nos</h1>
-            </div>
-        </section>
-        <div id="form" class="form hidden">
-            <div class="formBtnClose">
-                <button type="button" class="btnClose" onclick="toggleForm()">
-                    <img src="./images/svg/close.png" alt="fechar formulario"> 
-                </button>
-            </div>
-            <div class="form-text-wrapper">
-                <h1>Preencha os dados abaixo e receba uma simulação de antecipação de <span style="color: var(--orange)">GRAÇA!</span></h1>
-            </div>
-            <div class="form-wrapper">
-                <form action="./scripts/forms.js" id="elForm" method="POST">
-                    <div id="formFields">
-                        <div class="formTextFieldArea">
-                            <div class="form-c1">
-                                <label class="input">
-                                    <input type="text" class="input__field" name="nome" id="nome" placeholder=" " required></input>
-                                    <span class="input__label">Seu Nome</span>
-                                </label>
-                                <label class="input">
-                                    <input type="text" class="input__field" name="Email" id="email" placeholder=" " required ></input>
-                                    <span class="input__label">Email para contato</span>    
-                                </label>
-                            </div>
-                            <div class="form-c2">
-                                <label class="input">
-                                    <input type="text" class="input__field" name="nomeEmpresa" id="nomeEmpresa"  placeholder=" " required></input>
-                                    <span class="input__label">Nome da Empresa</span>
-                                </label>
-                                <label class="input">
-                                    <input type="text" class="input__field" name="ramo" id="ramo" placeholder=" " required></input>
-                                    <span class="input__label">Ramo de Atividade</span>
-                                </label>
-                            </div>
-                            <div class="form-c3">
-                                <label class="input" id="lblCNPJ">
-                                    <input type="text" class="input__field" id="CNPJ" placeholder=" " required></input>
-                                    <span class="input__label">CNPJ</span>
-                                </label>
-                                <label class="input" id="lblTelefone">
-                                    <input type="text" class="input__field" name="telefone" id="telefone" placeholder=" " required></input>
-                                    <span class="input__label">Telefone</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="formList">
-                            <div class="helperCenter">
-                                <label class="list">
-                                    <input list="optFaturamento" name="faturamento" class="list__field" id="faturamento" placeholder=" " required />
-                                    <span class="list__label">Faturamento médio mensal</span>
+  </head>
+  <body>
 
-                                <datalist id="optFaturamento">
-                                    <option value="50">Até 50mil</option>
-                                    <option value="100">De 50mil a 100mil</option>
-                                    <option value="100">De 50mil a 100mil</option>
-                                </datalist>
-                            </label>
-                            </div>
-                        </div>
-                        <div class="formlargeText">
-                            <div class="helperCenter">
-                                <label class="textArea">
-                                <textarea class="textArea__field" id="mensagem" placeholder=" " maxlength="200"></textarea>
-                                <span class="textArea__label">Digite sua mensagem aqui</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="formCheckbox">
-                            <input type="checkbox" id="ToS" required />
-                            <span class="ToS__label"> Você concorda com os nossos <a href="">Termos de Uso</a>?</span>
-                        </div>
-                        <div class="formEnviarBtn">
-                            <button class="submitBtn">Enviar</button>
-  
-                            <div class="loader hidden">
-                                <div class="check">
-                                <span class="check-one"></span>
-                                <span class="check-two"></span>
-                            </div>
-                        </div>
-                        <div class="bottomTextWrapper">
-                            <span class="bottomText">OU</span>
-                        </div>
-                        <div class="formWhatsapp">
-                
-                            <a href="https://api.whatsapp.com/send?phone=5513997112599&text=Ol%C3%A1%2C+vim+pelo+site+da+%2A%2AFinaster%2A%2A+e+gostaria+de+mais+informa%C3%A7%C3%B5es%21" class="formWhatsappLink" target="_blank"> </a>
-                            <div class="formWhatsappFa">
-                                <i class="fa fa-whatsapp formWhatsappIcon"></i>
-                                <span>Fale diretamente conosco</span>
-                            </div>
-                                
-                        </div>
-                    </div>
-                </form>
-            </div>
-            
-            
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
         </div>
-        
-    </main>
-</body>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+      <div class="top-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <a href="#" class=""><span class="mr-2  icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">comercial1@finaster.com.br</span></a>
+              <span class="mx-md-2 d-inline-block"></span>
+              <a href="#" class=""><span class="mr-2  icon-phone"></span> <span class="d-none d-md-inline-block">(13) 3821-3306</span></a>
+
+
+              <div class="float-right d-flex">
+                <p class="mb-0 pl-1 pl-md-0">
+                    <i class="fa-light fa-clock"></i>
+                    <span class="open pl-2">Seg - Sex (9:00 - 17:00)</span>
+                </p>
+                <a href="#" class=""><span class="mr-2  icon-whatsapp"></span> <span class="d-none d-md-inline-block">Whatsapp</span></a>
+                <span class="mx-md-2 d-inline-block"></span>
+                <a href="#" class=""><span class="mr-2  icon-facebook"></span> <span class="d-none d-md-inline-block">Facebook</span></a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+          <div class="row align-items-center position-relative">
+
+
+            <div class="site-logo">
+              <a href="index.html" class="navbar-brand"><img src="/images/sprite/logo.png" alt="Finaster Logo" width="170px"></a>
+            </div>
+
+            <div class="col-12">
+              <nav class="site-navigation text-right ml-auto " role="navigation">
+
+                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                  <li><a href="#home" class="nav-link link">Inicio</a></li>
+                  <li><a href="#antecipacao-section" class="nav-link">Antecipação</a></li>
+
+
+                  <li class="has-children">
+                    <a href="#about-section" class="nav-link">Sobre</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="#team-section" class="nav-link">Quem somos</a></li>
+                      <li><a href="#methodology-section" class="nav-link">Como operamos</a></li>
+                      <li><a href="#galeria-section" class="nav-link">Galeria</a></li>
+                      <!-- <li class="has-children">
+                        <a href="#">More Links</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Menu One</a></li>
+                          <li><a href="#">Menu Two</a></li>
+                          <li><a href="#">Menu Three</a></li>
+                        </ul>
+                      </li> -->
+                    </ul>
+                  </li>
+
+                  <li><a href="#why-us-section" class="nav-link">Vantagens</a></li>
+
+                  <li><a href="#testimonials-section" class="nav-link">Opiniões</a></li>
+                  <li><a href="#contact-section" class="nav-link">Contato</a></li>
+                </ul>
+              </nav>
+
+            </div>
+
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+        </div>
+
+      </header>
+
+    <header class="page-header header container-fluid" id="home">
+        <div class="overlay">
+            <div class="description">
+                <h1>Vendeu a prazo, mas precisa do dinheiro <span class="orangeText">hoje?</span></h1>
+                <p>Antecipamos suas duplicatas e pagamos à vista para sua empresa.</p>
+            </div>
+            <div class="simule">
+                <button class="btn btn-outline-secondary btn-lg">Simule agora mesmo!</button>
+            </div>
+        </div>
+    </header>
+    <section id="antecipacao-section" class="container-fluid">
+        <div class="container">
+            <div class="row d-flex">
+                
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
