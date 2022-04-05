@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/modal.css">
+
     <link rel="icon" type="image/png" href="/images/favicon/logo.png">
 
     <title>Finaster | Assessoria Financeira</title>
@@ -123,7 +125,7 @@
                 <p>Antecipamos suas duplicatas e pagamos à vista para sua empresa.</p>
             </div>
             <div class="simule">
-                <button class="btn btn-outline-secondary btn-lg">Simule agora mesmo!</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#Modal">Simule agora mesmo!</button>
             </div>
         </div>
     </header>
@@ -137,6 +139,63 @@
 
     </section>
 
+
+    <div class="modal fade" id="Modal" role="dialog">
+      <div class="modal-dialog modalWrapper">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="buttonClose" data-dismiss="modal"></button>
+            <h4 class="modal-title title">Preencha os dados abaixo e receba uma simulação de antecipação de
+              <span class="emphasis">GRAÇA</span>!</h4>
+          </div>
+          <div class="modal-body">
+            <form class="formSimulation" id="first-stage" action="/" method="get">
+              <div class="formSimulation__header">
+                <p class="formSimulation__title">Informe alguns dados</p>
+              </div>
+      
+              <label class="inputField" for="personName">
+                <span class="inputField__definition">Seu nome</span>
+                <input
+                  type="text"
+                  name="personName"
+                  id="personName"
+                  class="input"
+                  placeholder="Informe seu nome"
+                />
+              </label>
+      
+              <label class="inputField" for="userFantasyName">
+                <span class="inputField__definition">Nome da empresa</span>
+                <input
+                  type="text"
+                  name="userFantasyName"
+                  id="userFantasyName"
+                  class="input"
+                  placeholder="Nome da empresa"
+                />
+              </label>
+      
+              <label class="inputField" for="userCNPJ">
+                <span class="inputField__definition">CNPJ</span>
+                <input
+                  type="text"
+                  name="userCNPJ"
+                  id="userCNPJ"
+                  class="input"
+                  placeholder="CNPJ"
+                />
+              </label>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
 
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/popper.min.js"></script>

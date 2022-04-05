@@ -2,6 +2,13 @@
     --orange: #ff6600;
     --black: #4d4d4d;
     --grey: #808080;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-l: 2.5rem;
+    --space-xl: 5rem;
+    --primary-color: #ff6600;
+    --gray-900: hsl(24, 3%, 24%);
 
     scroll-behavior: smooth;
 }
