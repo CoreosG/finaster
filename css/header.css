@@ -1,5 +1,5 @@
 #home {
-    background-image: url('/images/banner/656852.webp');
+    background-image: url('../images/banner/656852.webp');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -20,7 +20,6 @@
     width: 100%;
 	top: 45%;
 	transform: translate(-50%, -55%);
-	text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
 }
 

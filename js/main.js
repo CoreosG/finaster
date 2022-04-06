@@ -1,3 +1,13 @@
+const globalVars = {
+	currentScrollPos: window.pageYOffset,
+}
+
+//Scroll events
+window.onscroll = function() {
+	globalVars.currentScrollPos = window.pageYOffset;
+	progressbarUpdate();
+}
+
 // Navbar
 $(function() {
 
@@ -86,6 +96,12 @@ $(function() {
 	siteMenuClone();
 
 });
+//progress-bar
+function progressbarUpdate() {
+	let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	let progress = (globalVars.currentScrollPos * 100) / (height);
+	document.getElementById('progressbar').style.width = progress+"%";
+}
 
 //header
 $(document).ready(function(){

@@ -363,3 +363,15 @@ a {
   font-size: 0.7rem;
   margin-right: 1rem;
 }
+
+.pg-bar-bg {
+  height: auto; 
+  padding-top: 6px;
+  background: #fff;
+}
+
+.pg-bar-progress {
+  width: 0%;
+  height:3px;
+  background: var(--orange);
+}
