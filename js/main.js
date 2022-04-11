@@ -108,27 +108,3 @@ $(document).ready(function(){
 	$('.header').height($(window).height());
 })
 
-//modal
-const inputField = document.querySelectorAll('.inputField')
-
-      inputField.forEach(el => {
-        el.addEventListener('click', () => {
-          el.classList.toggle('--js-inputActive')
-        })
-      })
-
-    //   =====================================
-    //   Evento de fechar
-    //   const modalClose = document.querySelector('.buttonClose')
-    //   const cancelEvent = el => el.preventDefault()
-    //   modalClose.addEventListener('click', cancelEvent)
-
-    //   modalClose.addEventListener('click', () => {
-    //     let verification = confirm(
-    //       'Você deseja mesmo fechar o formulário de cadastro?'
-    //     )
-	// 	if(!verification) return;
-
-	// 	$('#modal').modal('hide');
-    //     // remover a classe que torna o modal ativo
-    //   })

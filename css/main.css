@@ -10,6 +10,9 @@
     --primary-color: #ff6600;
     --gray-900: hsl(24, 3%, 24%);
 
+    --size-bezel: 0.5rem;
+    --size-radius: 4px;
+
     scroll-behavior: smooth;
 }
 
@@ -32,4 +35,8 @@
 
 .orangeText {
     color: var(--orange);
+}
+
+.bg-orange {
+    background: var(--orange);
 }

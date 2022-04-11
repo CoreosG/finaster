@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/modal.css">
 
     <link rel="icon" type="image/png" href="./images/favicon/logo.png">
@@ -88,7 +87,7 @@
                   <li class="has-children">
                     <a href="#about-section" class="nav-link">Sobre</a>
                     <ul class="dropdown arrow-top">
-                      <li><a href="#team-section" class="nav-link">Quem somos</a></li>
+                      <li><a href="#team-section" class="nav-link">Sobre Nós</a></li>
                       <li><a href="#methodology-section" class="nav-link">Como operamos</a></li>
                       <li><a href="#galeria-section" class="nav-link">Galeria</a></li>
                       <!-- <li class="has-children">
@@ -111,7 +110,7 @@
 
             </div>
 
-            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3" style="color: var(--orange)"></span></a></div>
 
           </div>
         </div>
@@ -132,91 +131,137 @@
             </div>
         </div>
     </header>
-    <section id="antecipacao-section" class="container-fluid">
-        <div class="container pt-3">
-            <div class="row d-flex">
-                <span>
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </span>
-                <span>
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </span>
-                <span>
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </span>
-                <span>
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </span>
-                <span>
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </span>
-                <span>
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </span>
-                <span>
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </span>
-                <span>
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </span>
 
+    <section id="antecipacao-section" class="jumbotron jumbotron-fluid mb-0 bg-orange">
+      <div class="container p-md-0">
+        <div class="row d-flex">
+          <div class="col-sm-4 p-md-0">
+            <h3 class="title text-white font-weight-bold" style="font-size: 1.4rem">O QUE É ANTECIPAÇÃO?</h2>
+            <hr class="bg-black">
+            <p class="text-dark font-weight-bold text-justify">A antecipação de recebíveis é um recurso financeiro que permite às empresas receberem valores antes do prazo previsto, é possível receber dinheiro referente a vendas a prazo, parceladas, com duplicatas, carnês, cheques pré-datados ou até mesmo antecipação de recebíveis por cartões de crédito. </p>
+            <div class="divider py-1 bg-orangered"></div>
+
+          </div>
+          <div class="col-sm-4 p-md-0">
+            <div class="card bg-transparent border-0" style="width: 100%; height: 100%;">
+              <img src="./images/sprite/invoice.png" alt="iconFactoring" class="mx-auto my-auto" style="height: 216px; width: 216px;">
             </div>
+          </div>
+          <div class="col-sm-4 p-md-0">
+            <h1 class="title font-weight-bold" style="font-size: 1.3em">ESTAMOS HÁ MAIS DE 15 ANOS...</h1>
+            <div class="container pr-0">
+              <hr class="bg-black">
+
+              <div class="ant-p" style="background-color: orangered"> <span>○ TRAZENDO A MELHOR SOLUÇÃO PARA O SEU NEGOCIO</span> </div>
+              <div class="ant-p" style="background-color: orangered; width: 90%;"> <span>○ COM AS MELHORES TAXAS DE ANTECIPAÇÃO</span> </div>
+              <div class="ant-p" style="background-color: var(--black); width: 80%;"> <span>○ COM O MELHOR SERVIÇO DO MERCADO</span></div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="#team-section" class="container-fluid bg-dark">
+      <div class="container">
+<span>fdc</span>
+      </div>
+
 
     </section>
 
 
     <div class="modal fade" id="Modal" role="dialog">
-      <div class="modal-dialog modalWrapper">
+      <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header form">
             <button type="button" class="buttonClose" data-dismiss="modal"></button>
-            <h4 class="modal-title title">Preencha os dados abaixo e receba uma simulação de antecipação de
-              <span class="emphasis">GRAÇA</span>!</h4>
-          </div>
-          <div class="modal-body">
-            <form class="formSimulation" id="first-stage" action="/" method="get">
-              <div class="formSimulation__header">
-                <p class="formSimulation__title">Informe alguns dados</p>
-              </div>
-      
-              <label class="inputField" for="personName">
-                <span class="inputField__definition">Seu nome</span>
-                <input
-                  type="text"
-                  name="personName"
-                  id="personName"
-                  class="input"
-                  placeholder="Informe seu nome"
-                />
-              </label>
-      
-              <label class="inputField" for="userFantasyName">
-                <span class="inputField__definition">Nome da empresa</span>
-                <input
-                  type="text"
-                  name="userFantasyName"
-                  id="userFantasyName"
-                  class="input"
-                  placeholder="Nome da empresa"
-                />
-              </label>
-      
-              <label class="inputField" for="userCNPJ">
-                <span class="inputField__definition">CNPJ</span>
-                <input
-                  type="text"
-                  name="userCNPJ"
-                  id="userCNPJ"
-                  class="input"
-                  placeholder="CNPJ"
-                />
-              </label>
+            <h1 class="modal-title title">Preencha os dados abaixo e receba uma simulação de antecipação de <span class="emphasis">GRAÇA!</span></h1>
+            <div class="modal-body">
+              <form autocomplete="nope" action="./scripts/forms.js" id="elForm" method="POST">
+                <div id="formFields">
+                    <div class="formTextFieldArea">
+                        <div class="form-c1">
+                            <label class="input">
+                                <input type="text" class="input__field" name="nome" id="nome" placeholder=" " autocomplete="nope" required></input>
+                                <span class="input__label">Seu Nome</span>
+                            </label>
+                            <label class="input">
+                                <input type="text" class="input__field" name="Email" id="email" placeholder=" " autocomplete="nope" required ></input>
+                                <span class="input__label">Email para contato</span>    
+                            </label>
+                        </div>
+                        <div class="form-c2">
+                            <label class="input">
+                                <input type="text" class="input__field" name="nomeEmpresa" id="nomeEmpresa" autocomplete="nope" placeholder=" " required></input>
+                                <span class="input__label">Nome da Empresa</span>
+                            </label>
+                            <label class="input">
+                                <input type="text" class="input__field" name="ramo" id="ramo" placeholder=" "  autocomplete="nope" required></input>
+                                <span class="input__label">Ramo de Atividade</span>
+                            </label>
+                        </div>
+                        <div class="form-c3">
+                            <label class="input" id="lblCNPJ">
+                                <input type="text" class="input__field" id="CNPJ" placeholder=" " autocomplete="nope" required></input>
+                                <span class="input__label">CNPJ</span>
+                            </label>
+                            <label class="input" id="lblTelefone">
+                                <input type="text" class="input__field" name="telefone" id="telefone" placeholder=" " autocomplete="nope" required></input>
+                                <span class="input__label">Telefone</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="formList">
+                        <div class="helperCenter">
+                            <label class="list">
+                                <select name="faturamento" class="list__field" id="faturamento" placeholder=" " required> 
+                                  <option value="0" disabled>Selecione uma opção</option>
+                                  <option value="50">Até 50mil</option>
+                                  <option value="100">De 50mil a 100mil</option>
+                                  <option value="100">De 100mil a 250mil</option>
+                                  <option value="100">De 250mil a 500mil</option>
+                                  <option value="100">De 500mil a 1 milhão</option>
+                                  <option value="100">Acima de 1 milhão</option>
+                                </select>
+                                <span class="list__label">Faturamento médio mensal</span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="formlargeText">
+                        <div class="helperCenter">
+                            <label class="textArea">
+                            <textarea class="textArea__field" id="mensagem" placeholder=" " maxlength="200" autocomplete="nope"></textarea>
+                            <span class="textArea__label">Digite sua mensagem aqui</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="formCheckbox">
+                        <input type="checkbox" id="ToS" required />
+                        <span class="ToS__label"> Você concorda com os nossos <a href="">Termos de Uso</a>?</span>
+                    </div>
+                    <div class="formEnviarBtn">
+                        <button class="submitBtn">Enviar</button>
+
+                        <div class="loader hidden">
+                            <div class="check">
+                            <span class="check-one"></span>
+                            <span class="check-two"></span>
+                        </div>
+                    </div>
+                    <div class="bottomTextWrapper">
+                        <span class="bottomText">OU</span>
+                    </div>
+                    <div class="formWhatsapp">
+                        <a href="https://api.whatsapp.com/send?phone=5513997112599&text=Ol%C3%A1%2C+vim+pelo+site+da+%2A%2AFinaster%2A%2A+e+gostaria+de+mais+informa%C3%A7%C3%B5es%21" class="formWhatsappLink" target="_blank"> 
+                          <div class="formWhatsappFa">
+                            <i class="fa icon-whatsapp formWhatsappIcon" aria-hidden="true"></i>
+                            <span>Fale diretamente conosco</span>
+                        </div>
+                        </a>
+                    </div>
+                </div>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+            </div>
         </div>
         
       </div>
@@ -225,20 +270,21 @@
 
 
 
+    <div> Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons"> Flat Icons </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
 
-<!-- jQuery library -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
-<!-- Popper JS -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Inputmasks -->
+    <script src="./node_modules/inputmask/dist/jquery.inputmask.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script> -->
     <script src="./js/jquery.sticky.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
