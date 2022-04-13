@@ -2,10 +2,19 @@ const globalVars = {
 	currentScrollPos: window.pageYOffset,
 }
 
+const triggers = {
+	animateOnceCards: 0
+	
+}
+
 //Scroll events
 window.onscroll = function() {
 	globalVars.currentScrollPos = window.pageYOffset;
 	progressbarUpdate();
+
+	animateNumCards();
+
+
 }
 
 // Navbar
@@ -96,6 +105,7 @@ $(function() {
 	siteMenuClone();
 
 });
+
 //progress-bar
 function progressbarUpdate() {
 	let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -108,3 +118,30 @@ $(document).ready(function(){
 	$('.header').height($(window).height());
 })
 
+//number animate
+function animateNumCards() {
+	if( ($(this).scrollTop() + window.innerHeight) >= $('#numCards').position().top && triggers.animateOnceCards != 1){
+        let clientes = document.getElementById("numClientes");
+		let anos = document.getElementById("numAnos");
+		let tempo = document.getElementById("numTempo");
+
+		animateValue(clientes, 0, 1600, 5000);
+		animateValue(anos, 0, 15, 5000);
+		animateValue(tempo, 0, 9, 5000);
+
+		triggers.animateOnceCards = 1
+    }
+}
+
+function animateValue(obj, start, end, duration) {
+	let startTimestamp = null;
+	const step = (timestamp) => {
+	  if (!startTimestamp) startTimestamp = timestamp;
+	  const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+	  obj.innerHTML = Math.floor(progress * (end - start) + start);
+	  if (progress < 1) {
+		window.requestAnimationFrame(step);
+	  }
+	};
+	window.requestAnimationFrame(step);
+  }
