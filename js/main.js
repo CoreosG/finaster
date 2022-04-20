@@ -106,6 +106,11 @@ $(function() {
 
 });
 
+//anchors
+
+
+
+
 //progress-bar
 function progressbarUpdate() {
 	let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -116,6 +121,16 @@ function progressbarUpdate() {
 //header
 $(document).ready(function(){
 	$('.header').height($(window).height());
+
+	$(document).on( "click", 'a[href^="#"]', function( e ) { 
+		e.preventDefault(); 
+		console.log("fodase")    
+		var target = this.hash,         
+		    $target = $(target);    
+		$('html, body').stop().animate({ 
+			scrollTop: $target.offset().top - $('#sticky-wrapper').height()
+		}, 1000);
+	});
 })
 
 //number animate
@@ -125,9 +140,9 @@ function animateNumCards() {
 		let anos = document.getElementById("numAnos");
 		let tempo = document.getElementById("numTempo");
 
-		animateValue(clientes, 0, 1600, 5000);
-		animateValue(anos, 0, 15, 5000);
-		animateValue(tempo, 0, 9, 5000);
+		animateValue(clientes, 0, 1700, 4500);
+		animateValue(anos, 0, 17, 4000);
+		animateValue(tempo, 0, 9, 4000);
 
 		triggers.animateOnceCards = 1
     }

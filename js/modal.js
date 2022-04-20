@@ -72,4 +72,30 @@ $(document).ready(function(){
         keepStatic: true,
         showMaskOnHover: false
     })
+	$('#email2').inputmask({
+        mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+        greedy: false,
+        onBeforePaste: function (pastedValue, opts) {
+          pastedValue = pastedValue.toLowerCase();
+          return pastedValue.replace("mailto:", "");
+        },
+        definitions: {
+          '*': {
+            validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+            casing: "lower"
+          }
+        },
+        showMaskOnHover: false
+      });
+    $('#CNPJ2').inputmask({
+        mask: "99.999.999/9999-99",
+        showMaskOnHover: false
+    })
+    $('#telefone2').inputmask({
+        mask: ["(99) 9999-9999", "(99) 9 9999-9999"],
+        keepStatic: true,
+        showMaskOnHover: false
+    })
 })
+
+

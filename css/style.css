@@ -25,7 +25,7 @@ body {
     visibility: visible; }
 
 p {
-  color: #b3b3b3;
+  color: black;
   font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6,
@@ -384,6 +384,10 @@ a {
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
+.card-body > p {
+  font-weight: 700;
+}
+
 
 .open {
   color: #666666;
@@ -537,7 +541,7 @@ a {
 	box-sizing: border-box;
 }
 .carousel-indicators li {	
-	background: #e2e2e2;
+	background: var(--grey);
 	border: 4px solid #fff;
 }
 .carousel-indicators li.active {
@@ -566,4 +570,79 @@ a {
 	left: 0;
 	right: 0;
 	bottom: -20px;
+}
+
+
+/* Contact Us */
+.map {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+   filter: grayscale(100%);
+}
+
+.dbox {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+.dbox p {
+  margin-bottom: 0;
+}
+.dbox p span {
+  font-weight: 500;
+  color: white;
+}
+.dbox p a {
+  color: white;
+}
+.dbox .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--orange);
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.dbox .icon span {
+  font-size: 20px;
+  color: white;
+}
+.dbox .text {
+  width: 100%;
+  color:white;
+}
+
+.dbox .text > p {
+  color: white;
+}
+
+
+/* footer */
+footer {
+  color: #caced1 !important
+}
+
+footer a{
+  color: #caced1 !important
+}
+
+
+li {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
+.Careers {
+  cursor: pointer;
+  color: var(--orange)
+}
+
+.row-1 {
+  background-color: #1E242A !important
+}
+
+.row-2 {
+  background-color: #28323C !important
 }

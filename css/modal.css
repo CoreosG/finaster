@@ -211,6 +211,15 @@ background-color: CanvasText;
   flex-direction: column;
 }
 
+.formEnviarBtn2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
 .submitBtn {
   position: relative;
   display: block;
@@ -328,6 +337,7 @@ background-color: CanvasText;
   width: 100%;
   justify-content: center;
   align-content: center;
+  vertical-align: middle;
 }
 
 .bottomText {
@@ -335,6 +345,15 @@ background-color: CanvasText;
   font-weight: bold;
   font-size: calc(0.6rem + 0.4vw);
 }
+
+.bottomText2 {
+  color: var(--orange);
+  font-weight: bold;
+  font-size: calc(0.6rem + 0.4vw);
+  transform: translateY(50%);
+}
+
+
 
 /* related to the input elements */
 
@@ -516,6 +535,9 @@ user-select: none;
 
 }
 
+.formWhatsappLink:hover {
+  background-color: #1bb955
+}
 
 .formWhatsappFa {
   position: absolute;
@@ -528,6 +550,10 @@ user-select: none;
   font-weight: 300;
   font-size: 0.78rem;
   cursor: pointer;
+}
+
+.formWhatsappFa {
+  width: 100%;
 }
 
 
@@ -583,6 +609,9 @@ user-select: none;
   width: 100%;
 }
 
+.bottomText2 {
+  transform: none;
+}
 
 }
 
