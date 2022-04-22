@@ -97,7 +97,7 @@
   height: auto;
 }
 
-#formFields {
+.formFields {
   width: 100%;
   position: relative;
   /* margin: 0 auto; */
@@ -148,7 +148,7 @@
   width: 100%;
 }
 
-#ToS {
+.ToS {
   position: relative;
   display: inline;
   
@@ -179,7 +179,7 @@
   margin: .5%;
 }
 
-#ToS::before {
+.ToS::before {
   content: "";
 width: 0.65em;
 height: 0.65em;
@@ -193,11 +193,11 @@ box-shadow: inset 1em 1em var(--form-control-color);
 background-color: CanvasText;
 }
 
-#ToS:checked::before {
+.ToS:checked::before {
   transform: scale(1);
 }
 
-#ToS:focus {
+.ToS:focus {
   outline: max(1px, 0.15em) solid currentColor;
   outline-offset: max(2px, 0.15em);
 }

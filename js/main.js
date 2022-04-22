@@ -7,6 +7,7 @@ const triggers = {
 	
 }
 
+
 //Scroll events
 window.onscroll = function() {
 	globalVars.currentScrollPos = window.pageYOffset;
@@ -16,6 +17,15 @@ window.onscroll = function() {
 
 
 }
+
+//preloader
+$(window).on('load', function(){
+	setTimeout(function(){
+		$('#preloadGif').fadeOut()
+	$('#preload').delay(350).fadeOut('slow')
+	$(':root').delay(350).css({'overflow-y': 'visible'})
+	}, 1000)
+ })
 
 // Navbar
 $(function() {
@@ -105,11 +115,6 @@ $(function() {
 	siteMenuClone();
 
 });
-
-//anchors
-
-
-
 
 //progress-bar
 function progressbarUpdate() {

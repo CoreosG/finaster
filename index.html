@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="./css/owl.carousel.min.css">
       <!-- compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./node_modules/wow.js/css/libs/animate.css"/>
       <!-- Style -->
       <link rel="stylesheet" href="./css/main.css">
       <link rel="stylesheet" href="./css/style.css">
@@ -20,6 +21,15 @@
       <title>Finaster | Assessoria Financeira</title>
    </head>
    <body>
+      <script>
+         history.scrollRestoration = "manual";
+         window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+         }
+      </script>
+      <div id="preload" class="preloader">
+         <img id="preloadGif" src="./images/gifs/logoGif.gif" alt="loading page">
+      </div>
       <div class="site-mobile-menu site-navbar-target">
          <div class="site-mobile-menu-header">
             <div class="site-mobile-menu-close mt-3">
@@ -90,8 +100,8 @@
       <header class="page-header header container-fluid" id="home">
          <div class="overlay">
             <div class="description">
-               <h1 class="text-sm-left text-md-center">Vendeu a prazo, mas precisa do dinheiro <span class="orangeText">hoje?</span></h1>
-               <p class="text-sm-left text-md-center">Antecipamos suas duplicatas e pagamos à vista para sua empresa.</p>
+               <h1 class="text-sm-left text-md-center wow shake" data-wow-duration="1s" data-wow-delay="1s">Vendeu a prazo, mas precisa do dinheiro <span class="orangeText">hoje?</span></h1>
+               <p class="text-sm-left text-md-center">Antecipamos suas duplicatas ou cheques e pagamos à vista para sua empresa.</p>
             </div>
             <div class="simule">
                <button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#Modal">Simule agora mesmo!</button>
@@ -102,23 +112,23 @@
          <div class="container p-md-0">
             <div class="row d-flex">
                <div class="col-sm-4 p-md-0">
-                  <h3 class="title text-black font-weight-bold" style="font-size: 1.4rem">O QUE É ANTECIPAÇÃO?</h3>
+                  <h3 class="title text-black font-weight-bold wow fadeInUp" style="font-size: 1.4rem">O QUE É ANTECIPAÇÃO?</h3>
                   <hr class="bg-black">
-                  <p class="text-dark font-weight-bold text-justify">A antecipação de recebíveis é um recurso financeiro que permite às empresas receberem valores antes do prazo previsto, é possível receber dinheiro referente a vendas a prazo, parceladas, com duplicatas, carnês, cheques pré-datados ou até mesmo antecipação de recebíveis por cartões de crédito. </p>
+                  <p class="text-dark font-weight-bold text-justify wow fadeInUp">A antecipação de recebíveis é um recurso financeiro que permite às empresas receberem valores antes do prazo previsto, é possível receber dinheiro referente a vendas a prazo, parceladas, com duplicatas, carnês, cheques pré-datados ou até mesmo antecipação de recebíveis por cartões de crédito. </p>
                   <div class="divider py-1 bg-orangered"></div>
                </div>
-               <div class="col-sm-4 p-md-0">
+               <div class="col-sm-4 p-md-0 wow fadeIn" data-wow-delay="1s">
                   <div class="card bg-transparent border-0" style="width: 100%; height: 100%;">
                      <img src="./images/sprite/invoice.png" alt="iconFactoring" class="mx-auto my-auto effect-hover" style="height: 216px; width: 216px;">
                   </div>
                </div>
                <div class="col-sm-4 p-md-0">
-                  <h1 class="title font-weight-bold" style="font-size: 1.3em">ESTAMOS HÁ MAIS DE 15 ANOS...</h1>
-                  <div class="container pr-0">
+                  <h1 class="title font-weight-bold wow fadeInLeft" data-wow-duration="1s" style="font-size: 1.3em">ESTAMOS HÁ MAIS DE 17 ANOS...</h1>
+                  <div class="container pr-0 ">
                      <hr class="bg-black">
-                     <div class="ant-p" style="background-color: orangered"> <span>○ TRAZENDO A MELHOR SOLUÇÃO PARA O SEU NEGOCIO</span> </div>
-                     <div class="ant-p" style="background-color: orangered; width: 90%;"> <span>○ COM AS MELHORES TAXAS DE ANTECIPAÇÃO</span> </div>
-                     <div class="ant-p" style="background-color: var(--black); width: 80%;"> <span>○ COM O MELHOR SERVIÇO DO MERCADO</span></div>
+                     <div class="ant-p wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s" style="background-color: orangered"> <span>○ TRAZENDO A MELHOR SOLUÇÃO PARA O SEU NEGOCIO</span> </div>
+                     <div class="ant-p wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="background-color: orangered; width: 90%;"> <span>○ COM AS MELHORES TAXAS DE ANTECIPAÇÃO</span> </div>
+                     <div class="ant-p wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s" style="background-color: var(--black); width: 80%;"> <span>○ COM O MELHOR SERVIÇO DO MERCADO</span></div>
                   </div>
                </div>
             </div>
@@ -126,35 +136,35 @@
       </section>
       <section id="team-section">
          <div class="py-1 bg-custom2">
-            <h1 class="title text-white">Sobre Nós</h1>
+            <h1 class="title text-white wow fadeInDown">Sobre Nós</h1>
             <hr class="bg-white">
          </div>
          <div class="container pb-sm-3">
             <div class="row">
                <div class="col-sm-6 py-5">
-                  <h5 class="font-weight-bold">Somos a solução para o seu negócio</h5>
-                  <h3 class="font-weight-bolder py-3">Precisa de crédito rápido para pagar? Nós podemos te ajudar!</h3>
-                  <p class="text-justify text-dark font-weight-bold py-2">A <span class="orangeText">Finaster</span> é uma empresa de consultoria financeira e de desenvolvimento de pessoas, com mais de quinze anos de experiência na região do Vale do Ribeira, buscando melhorar a saúde financeira de pequenas e médias empresas, dando total visão de margem de lucro, ganho real, rentabilidade, análise de resultados, otimização de recursos e apuração da lucratividade.<br> 
+                  <h5 class="font-weight-bold wow fadeInUp">Somos a solução para o seu negócio</h5>
+                  <h3 class="font-weight-bolder py-3 wow fadeInUp">Precisa de crédito rápido para pagar? Nós podemos te ajudar!</h3>
+                  <p class="text-justify text-dark font-weight-bold py-2 wow fadeInUp" data-wow-delay="0.5s">A <span class="orangeText">Finaster</span> é uma empresa de consultoria financeira e de desenvolvimento de pessoas, com mais de quinze anos de experiência na região do Vale do Ribeira, buscando melhorar a saúde financeira de pequenas e médias empresas, dando total visão de margem de lucro, ganho real, rentabilidade, análise de resultados, otimização de recursos e apuração da lucratividade.<br> 
                      <br> Visando o preparo de empresas para sobreviver, crescer e se desenvolver no mercado, prestando assessoria financeira de forma a implantar sistemas, e controles de análises que possam proporcionar a ajuda necessária para as tomadas de decisões.
                   </p>
-                  <div class="d-flex justify-content-center d-md-block">
+                  <div class="d-flex justify-content-center d-md-block wow fadeInUp" data-wow-delay="0.5s">
                      <button type="button" class="btn btn-outline-secondary btn-lg btn-modal-about" data-toggle="modal" data-target="#Modal" style="color: black">Simule agora mesmo!</button>
                   </div>
                </div>
-               <div class="col-sm-6 py-sm-1 my-sm-2 my-md-0 d-flex">
+               <div class="col-sm-6 py-sm-1 my-sm-2 my-md-0 d-flex wow fadeIn">
                   <img src="./images/sprite/ilustrativo.png" alt="ilustrativoNegocio" class="py-md-1 my-auto mx-auto justify-content-center effect-hover"style="width: 100%;">
                </div>
             </div>
          </div>
-         <section id="services-section">
+         <section id="services-section wow fadeInDown">
             <div class="bg-custom3 py-5">
                <h1 class="text-center text-white font-weight-bold py-2">Nossos Serviços</h1>
                <p class="text-center text-white pb-5">Algumas das atividades que realizamos</p>
             </div>
          </section>
          <section id="services-section2" class="container">
-            <div class="card-deck" style="margin: -5%;">
-               <div class="card card-effect">
+            <div class="card-deck" style="margin-top: -5%;">
+               <div class="card card-effect wow fadeInUp" data-wow-delay="0.5s">
                   <img src="./images/sprite/key-to-success.png" alt="iconFactoring" class="card-img-top mx-auto my-2" style="width: 50%;">
                   <div class="card-body">
                      <h4 class="card-title text-center text-black font-weight-bold">FACTORING</h4>
@@ -169,7 +179,7 @@
                      </p>
                   </div>
                </div>
-               <div class="card card-effect">
+               <div class="card card-effect wow fadeInUp" data-wow-delay="0.8s">
                   <img src="./images/sprite/shake-hands.png" alt="iconFactoring" class="card-img-top mx-auto my-2" style="width: 50%;">
                   <div class="card-body">
                      <h4 class="card-title text-center text-black font-weight-bold">TRUSTEE</h4>
@@ -183,7 +193,7 @@
                      </div>
                   </div>
                </div>
-               <div class="card card-effect">
+               <div class="card card-effect wow fadeInUp" data-wow-delay="1.1s">
                   <img src="./images/sprite/administrative.png" alt="iconFactoring" class="card-img-top mx-auto my-2" style="width: 50%;">
                   <div class="card-body">
                      <h6 class="card-title text-center text-black font-weight-bold">ASSESSORIA ADMINISTRATIVA</h6>
@@ -195,7 +205,7 @@
                      </p>
                   </div>
                </div>
-               <div class="card card-effect">
+               <div class="card card-effect wow fadeInUp" data-wow-delay="1.4s">
                 <img src="./images/sprite/financial-advisor.png" alt="iconFactoring" class="card-img-top mx-auto my-2" style="width: 50%;">
                 <div class="card-body">
                    <h6 class="card-title text-center text-black font-weight-bold">ASSESSORIA FINANCEIRA</h6>
@@ -222,22 +232,22 @@
          </svg>
          <div class="container-fluid px-0 bg-custom4" style="padding-bottom: 15%;">
             <div class="container d-block">
-               <div class="card-deck mx-auto" style="padding-top: 20%;">
-                  <div class="card card-numbers" id="numCards">
+               <div class="card-deck mx-auto " style="padding-top: 20%;">
+                  <div class="card card-numbers effect-hover wow fadeInUp" style="border-radius: 0 !important;" data-wow-delay="0.5s" data-wow-offset="-300" id="numCards">
                      <img src="./images/sprite/handshake.gif" alt="aperto de mão" class="card-imgt-top mx-auto">
                      <div class="card-body">
                         <h4 class="card-title text-center">+<span id="numClientes">0</span></h4>
                         <p class="card-text text-center text-dark" style="font-size: 0.8em">Clientes que fazem negócio conosco</p>
                      </div>
                   </div>
-                  <div class="card card-numbers">
+                  <div class="card card-numbers effect-hover wow fadeInUp" style="border-radius: 0 !important;" data-wow-delay="0.9s" data-wow-offset="-300">
                      <img src="./images/sprite/calendar.gif" alt="calendario" class="card-imgt-top mx-auto">
                      <div class="card-body">
                         <h4 class="card-title text-center">+<span id="numAnos">0</span> anos</h4>
                         <p class="card-text text-center text-dark" style="font-size: 0.8em">De prestação de serviços com excelência</p>
                      </div>
                   </div>
-                  <div class="card card-numbers">
+                  <div class="card card-numbers effect-hover wow fadeInUp" style="border-radius: 0 !important;" data-wow-delay="1.4s" data-wow-offset="-300">
                      <img src="./images/sprite/clock.gif" alt="aperto de mão" class="card-imgt-top mx-auto">
                      <div class="card-body">
                         <h4 class="card-title text-center"><span id="numTempo">0</span> minutos</h4>
@@ -255,7 +265,7 @@
          <div class="container-xl">
             <div class="row">
                <div class="col-sm-12">
-                  <h2 class="titleTestimonial">O que <b>nossos clientes</b> estão dizendo</h2>
+                  <h2 class="titleTestimonial wow fadeinLeft">O que <b>nossos clientes</b> estão dizendo</h2>
                   <div id="myCarousel" class="carousel slide" data-ride="carousel">
                      <!-- Carousel indicators -->
                      <ol class="carousel-indicators">
@@ -264,7 +274,7 @@
                         <li data-target="#myCarousel" data-slide-to="2"></li>
                      </ol>
                      <!-- Wrapper for carousel items -->
-                     <div class="carousel-inner">
+                     <div class="carousel-inner wow fadeIn">
                         <div class="carousel-item active">
                            <div class="row">
                               <div class="col-sm-6">
@@ -306,7 +316,7 @@
                               </div>
                               <div class="col-sm-6">
                                  <div class="media">
-                                    <img src="/examples/images/clients/4.jpg" class="mr-3" alt="">
+                                    <img src="./images/clients/giancarlo.jpg" class="mr-3" alt="">
                                     <div class="media-body">
                                        <div class="testimonial">
                                           <p>Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra.</p>
@@ -321,7 +331,7 @@
                            <div class="row">
                               <div class="col-sm-6">
                                  <div class="media">
-                                    <img src="/examples/images/clients/5.jpg" class="mr-3" alt="">
+                                    <img src="./images/clients/lucilene.jpg" class="mr-3" alt="">
                                     <div class="media-body">
                                        <div class="testimonial">
                                           <p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem scelerisque tempor, varius quam luctus dui. Mauris magna metus nec.</p>
@@ -332,7 +342,7 @@
                               </div>
                               <div class="col-sm-6">
                                  <div class="media">
-                                    <img src="/examples/images/clients/6.jpg" class="mr-3" alt="">
+                                    <img src="./images/clients/amati.jpg" class="mr-3" alt="">
                                     <div class="media-body">
                                        <div class="testimonial">
                                           <p>Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget mi suscipit tincidunt. Utmtc tempus dictum. Pellentesque virra.</p>
@@ -354,35 +364,35 @@
             <div class="row mt-4">
               <div class="col-sm-7 mt-4 bg-white pb-3 px-5">
                 <h1 class="title">Preencha os dados abaixo e receba uma simulação de antecipação de <span class="emphasis">GRAÇA!</span></h1>
-                   <form autocomplete="nope" action="./scripts/forms.js" id="elForm" method="POST">
+                   <form autocomplete="nope" action="./scripts/validate.js" id="formContact" method="POST">
                       <div id="formFields">
                          <div class="formTextFieldArea">
                             <div class="form-c1">
                                <label class="input">
-                               <input type="text" class="input__field" name="nome" id="nome" placeholder=" " autocomplete="nope" required></input>
+                               <input type="text" class="input__field" name="nome" id="nome2" placeholder=" " autocomplete="nope" required></input>
                                <span class="input__label">Seu Nome</span>
                                </label>
                                <label class="input">
-                               <input type="text" class="input__field" name="Email2" id="email" placeholder=" " autocomplete="nope" required ></input>
+                               <input type="text" class="input__field" name="Email2" id="email2" placeholder=" " autocomplete="nope" required ></input>
                                <span class="input__label">Email para contato</span>    
                                </label>
                             </div>
                             <div class="form-c2">
                                <label class="input">
-                               <input type="text" class="input__field" name="nomeEmpresa" id="nomeEmpresa" autocomplete="nope" placeholder=" " required></input>
+                               <input type="text" class="input__field" name="nomeEmpresa" id="nomeEmpresa2" autocomplete="nope" placeholder=" " required></input>
                                <span class="input__label">Nome da Empresa</span>
                                </label>
                                <label class="input">
-                               <input type="text" class="input__field" name="ramo" id="ramo" placeholder=" "  autocomplete="nope" required></input>
+                               <input type="text" class="input__field" name="ramo" id="ramo2" placeholder=" "  autocomplete="nope" required></input>
                                <span class="input__label">Ramo de Atividade</span>
                                </label>
                             </div>
                             <div class="form-c3">
-                               <label class="input" id="lblCNPJ">
+                               <label class="input" class="lblCNPJ">
                                <input type="text" class="input__field" id="CNPJ2" placeholder=" " autocomplete="nope" required></input>
                                <span class="input__label">CNPJ</span>
                                </label>
-                               <label class="input" id="lblTelefone">
+                               <label class="input" class="lblTelefone">
                                <input type="text" class="input__field" name="telefone" id="telefone2" placeholder=" " autocomplete="nope" required></input>
                                <span class="input__label">Telefone</span>
                                </label>
@@ -391,7 +401,7 @@
                          <div class="formList">
                             <div class="helperCenter">
                                <label class="list">
-                                  <select name="faturamento" class="list__field" id="faturamento" placeholder=" " required>
+                                  <select name="faturamento" class="list__field" id="faturamento2" placeholder=" " required>
                                      <option value="0" disabled>Selecione uma opção</option>
                                      <option value="50">Até 50mil</option>
                                      <option value="100">De 50mil a 100mil</option>
@@ -407,13 +417,13 @@
                          <div class="formlargeText">
                             <div class="helperCenter">
                                <label class="textArea">
-                               <textarea class="textArea__field" id="mensagem" placeholder=" " maxlength="200" autocomplete="nope"></textarea>
+                               <textarea class="textArea__field" id="mensagem2" placeholder=" " maxlength="200" autocomplete="nope"></textarea>
                                <span class="textArea__label">Digite sua mensagem aqui</span>
                                </label>
                             </div>
                          </div>
                          <div class="formCheckbox">
-                            <input type="checkbox" id="ToS" required />
+                            <input type="checkbox" id="ToS2" class="ToS" required />
                             <span class="ToS__label"> Você concorda com os nossos <a href="">Termos de Uso</a>?</span>
                          </div>
                          <div class="row d-md-flex mt-2 justify-content-center">
@@ -458,7 +468,7 @@
          <div class="container mt-5">
           <div class="row">
             <div class="col-md-3">
-              <div class="dbox w-100 text-center">
+              <div class="dbox w-100 text-center wow fadeIn">
                 <div class="icon d-flex align-items-center justify-content-center">
                   <span class="fa fa-map-marker"></span>
                 </div>
@@ -468,7 +478,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div class="dbox w-100 text-center">
+              <div class="dbox w-100 text-center wow fadeIn">
                 <div class="icon d-flex align-items-center justify-content-center">
                   <span class="fa fa-phone"></span>
                 </div>
@@ -478,7 +488,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div class="dbox w-100 text-center">
+              <div class="dbox w-100 text-center wow fadeIn">
                 <div class="icon d-flex align-items-center justify-content-center">
                   <span class="fa fa-paper-plane"></span>
                 </div>
@@ -488,7 +498,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div class="dbox w-100 text-center">
+              <div class="dbox w-100 text-center wow fadeIn">
                 <div class="icon d-flex align-items-center justify-content-center">
                   <span class="fa icon-facebook"></span>
                 </div>
@@ -551,8 +561,8 @@
                <button type="button" class="buttonClose" data-dismiss="modal"></button>
                <h1 class="modal-title title">Preencha os dados abaixo e receba uma simulação de antecipação de <span class="emphasis">GRAÇA!</span></h1>
                <div class="modal-body">
-                  <form autocomplete="nope" action="./scripts/forms.js" id="elForm" method="POST">
-                     <div id="formFields">
+                  <form autocomplete="nope" action="./scripts/validate.js" id="formModal" method="POST">
+                     <div class="formFields">
                         <div class="formTextFieldArea">
                            <div class="form-c1">
                               <label class="input">
@@ -575,11 +585,11 @@
                               </label>
                            </div>
                            <div class="form-c3">
-                              <label class="input" id="lblCNPJ">
+                              <label class="input" class="lblCNPJ">
                               <input type="text" class="input__field" id="CNPJ" placeholder=" " autocomplete="nope" required></input>
                               <span class="input__label">CNPJ</span>
                               </label>
-                              <label class="input" id="lblTelefone">
+                              <label class="input" class="lblTelefone">
                               <input type="text" class="input__field" name="telefone" id="telefone" placeholder=" " autocomplete="nope" required></input>
                               <span class="input__label">Telefone</span>
                               </label>
@@ -610,7 +620,7 @@
                            </div>
                         </div>
                         <div class="formCheckbox">
-                           <input type="checkbox" id="ToS" required />
+                           <input type="checkbox" id="ToS" class="ToS" required />
                            <span class="ToS__label"> Você concorda com os nossos <a href="">Termos de Uso</a>?</span>
                         </div>
                         <div class="formEnviarBtn">
@@ -655,10 +665,16 @@
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
       <!-- Latest compiled JavaScript -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  
       <!-- Inputmasks -->
       <script src="./node_modules/inputmask/dist/jquery.inputmask.min.js"></script>
+      <script src="./node_modules/wow.js/dist/wow.min.js"></script>
       <script src="./js/jquery.sticky.js"></script>
+      <script src="./js/animations.js"></script>
       <script src="./js/main.js"></script>
       <script src="./js/modal.js"></script>
+      
+      <script src="./js/validate.js"></script>
+
    </body>
 </html>

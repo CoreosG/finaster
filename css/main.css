@@ -14,6 +14,8 @@
     --size-radius: 4px;
 
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 *::-webkit-scrollbar {
@@ -32,6 +34,31 @@
     background-color: white; 
     /* border-radius: 8px;  */
 } 
+
+
+.preloader {
+    z-index: 99999;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+}
+    
+
+.preloader img {
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .preloader img {
+        width: 20%;
+    }
+}
 
 .orangeText {
     color: var(--orange);

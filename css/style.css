@@ -428,27 +428,31 @@ a {
 
 
 .bg-custom1 {
-  background-image: url(../images/bgwhitepaper.jpg);
+  background-image: url(../images/banner/bgwhitepaper.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .bg-custom2 {
-  background-image: url(../images/bgbluetech.jpg) ;
+  background-image: url(../images/banner/bgbluetech.jpg) ;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .bg-custom3{
-  background-image: url(../images/bgsolidblue.png);
+  background-image: url(../images/banner/bgsolidblue.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .bg-custom4{
-  background-image: url(../images/bgbluetech.jpg);
+  background-image: url(../images/banner/bgbluetech.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   margin-top: -9.8%;
   height: auto;
 }
