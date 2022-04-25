@@ -50,9 +50,9 @@
                         <i class="fa fa-clock"></i>
                         <span class="open pl-2">Seg - Sex (9:00 - 17:00)</span>
                      </p>
-                     <a href="https://api.whatsapp.com/send?phone=5513997112599&text=Ol%C3%A1%2C+vim+pelo+site+da+%2A%2AFinaster%2A%2A+e+gostaria+de+mais+informa%C3%A7%C3%B5es%21" class=""><span class="mr-2  icon-whatsapp"></span> <span class="d-none d-md-inline-block">Whatsapp</span></a>
+                     <a href="https://api.whatsapp.com/send?phone=5513997112599&text=Ol%C3%A1%2C+vim+pelo+site+da+%2A%2AFinaster%2A%2A+e+gostaria+de+mais+informa%C3%A7%C3%B5es%21" target="_blank" class=""><span class="mr-2  icon-whatsapp"></span> <span class="d-none d-md-inline-block">Whatsapp</span></a>
                      <span class="mx-md-2 d-inline-block"></span>
-                     <a href="https://facebook.com/finaster" class=""><span class="mr-2  icon-facebook"></span> <span class="d-none d-md-inline-block">Facebook</span></a>
+                     <a href="https://facebook.com/finaster" target="_blank"><span class="mr-2  icon-facebook"></span> <span class="d-none d-md-inline-block">Facebook</span></a>
                   </div>
                </div>
             </div>
@@ -70,7 +70,7 @@
                         <li><a id="btnHome" href="#home" class="nav-link link">Inicio</a></li>
                         <li><a href="#antecipacao-section" class="nav-link">Antecipação</a></li>
                         <li class="has-children">
-                           <a href="#about-section" class="nav-link">Sobre</a>
+                           <p class="nav-link" >Sobre</p> <!-- TODO: change to text -->
                            <ul class="dropdown arrow-top">
                               <li><a href="#team-section" class="nav-link">Sobre Nós</a></li>
                               <li><a href="#services-section" class="nav-link">Nossos serviços</a></li>
@@ -156,7 +156,7 @@
                </div>
             </div>
          </div>
-         <section id="services-section wow fadeInDown">
+         <section id="services-section" class="wow fadeInDown">
             <div class="bg-custom3 py-5">
                <h1 class="text-center text-white font-weight-bold py-2">Nossos Serviços</h1>
                <p class="text-center text-white pb-5">Algumas das atividades que realizamos</p>
@@ -170,12 +170,8 @@
                      <h4 class="card-title text-center text-black font-weight-bold">FACTORING</h4>
                      <span class=" card-text orangeText" style="font-weight: 1000;">Factoring Convencional</span>
                      <p class="card-text text-justify" style="overflow-wrap: wrap; font-size: 0.8em;"> 
-                        Nessa modalidade nós (factoring) adquirimos seus direitos creditórios (empresa fomentada). 
-                     </p>
-                     <span class="card-text orangeText" style="font-weight: 1000;">Factoring Matéria-Prima</span>
-                     <p class="card-text text-justify" style="overflow-wrap: wrap; font-size: 0.8em;"> 
-                        Nessa modalidade, a factoring realiza a compra de matéria-prima – junto a um fornecedor – para a você (cliente). 
-                        <br> Posteriormente, você pode realizar o pagamento com os recursos obtidos com a comercialização dos produtos produzidos com essa matéria-prima. 
+                        Nessa modalidade nós (factoring) adquirimos seus direitos creditórios (empresa fomentada). <br> <br>
+                        Na <strong>Finaster</strong> nós antecipamos suas duplicatas e cheques com as melhores taxas do mercado, estamos sempre abertos para negociação, fazemos análise para negativado.
                      </p>
                   </div>
                </div>
@@ -196,12 +192,11 @@
                <div class="card card-effect wow fadeInUp" data-wow-delay="1.1s">
                   <img src="./images/sprite/administrative.png" alt="iconFactoring" class="card-img-top mx-auto my-2" style="width: 50%;">
                   <div class="card-body">
-                     <h6 class="card-title text-center text-black font-weight-bold">ASSESSORIA ADMINISTRATIVA</h6>
-                     <span class=" card-text orangeText" style="font-weight: 1000;">Factoring Convencional</span>
-                     <p class="card-text text-justify" style="overflow-wrap: wrap; font-size: 0.8em;"> 
-                     </p>
+                     <h6 class="card-title text-center text-black font-weight-bold">MATÉRIA-PRIMA</h6>
                      <span class="card-text orangeText" style="font-weight: 1000;">Factoring Matéria-Prima</span>
-                     <p class="card-text text-justify" style="overflow-wrap: wrap; font-size: 0.8em;">
+                     <p class="card-text text-justify" style="overflow-wrap: wrap; font-size: 0.8em;"> 
+                        Nessa modalidade, a factoring realiza a compra de matéria-prima – junto a um fornecedor – para a você (cliente). <br>
+                        <br> Posteriormente, você pode realizar o pagamento com os recursos obtidos com a comercialização dos produtos produzidos com essa matéria-prima. 
                      </p>
                   </div>
                </div>
@@ -373,7 +368,7 @@
                                <span class="input__label">Seu Nome</span>
                                </label>
                                <label class="input">
-                               <input type="text" class="input__field" name="Email2" id="email2" placeholder=" " autocomplete="nope" required ></input>
+                               <input type="text" class="input__field" name="email" id="email2" placeholder=" " autocomplete="nope" required ></input>
                                <span class="input__label">Email para contato</span>    
                                </label>
                             </div>
@@ -389,7 +384,7 @@
                             </div>
                             <div class="form-c3">
                                <label class="input" class="lblCNPJ">
-                               <input type="text" class="input__field" id="CNPJ2" placeholder=" " autocomplete="nope" required></input>
+                               <input type="text" class="input__field" name="CNPJ" id="CNPJ2" placeholder=" " autocomplete="nope" required></input>
                                <span class="input__label">CNPJ</span>
                                </label>
                                <label class="input" class="lblTelefone">
@@ -417,13 +412,13 @@
                          <div class="formlargeText">
                             <div class="helperCenter">
                                <label class="textArea">
-                               <textarea class="textArea__field" id="mensagem2" placeholder=" " maxlength="200" autocomplete="nope"></textarea>
+                               <textarea class="textArea__field" name="mensagem" id="mensagem2" placeholder=" " maxlength="200" autocomplete="nope"></textarea>
                                <span class="textArea__label">Digite sua mensagem aqui</span>
                                </label>
                             </div>
                          </div>
                          <div class="formCheckbox">
-                            <input type="checkbox" id="ToS2" class="ToS" required />
+                            <input type="checkbox" name="ToS" id="ToS2" class="ToS" required />
                             <span class="ToS__label"> Você concorda com os nossos <a href="">Termos de Uso</a>?</span>
                          </div>
                          <div class="row d-md-flex mt-2 justify-content-center">
@@ -534,7 +529,7 @@
                     </div>
                     <div class="col-sm-3 my-sm-0 mt-5">
                         <ul class="list-unstyled">
-                            <li class="mt-0"><a href="./index.html#about-section">Sobre Nós</a></li>
+                            <li class="mt-0"><a href="./index.html#team-section">Sobre Nós</a></li>
                             <li><a href="./index.html#services-section">Serviços</a></li>
                             <li> <a href="mailto:comercial1@finaster.com.br"><span class="Careers">Trabalhe conosco</span></a></li>
                         </ul>
@@ -570,7 +565,7 @@
                               <span class="input__label">Seu Nome</span>
                               </label>
                               <label class="input">
-                              <input type="text" class="input__field" name="Email" id="email" placeholder=" " autocomplete="nope" required ></input>
+                              <input type="text" class="input__field" name="email" id="email" placeholder=" " autocomplete="nope" required ></input>
                               <span class="input__label">Email para contato</span>    
                               </label>
                            </div>
@@ -586,7 +581,7 @@
                            </div>
                            <div class="form-c3">
                               <label class="input" class="lblCNPJ">
-                              <input type="text" class="input__field" id="CNPJ" placeholder=" " autocomplete="nope" required></input>
+                              <input type="text" class="input__field" name="CNPJ" id="CNPJ" placeholder=" " autocomplete="nope" required></input>
                               <span class="input__label">CNPJ</span>
                               </label>
                               <label class="input" class="lblTelefone">
@@ -602,10 +597,10 @@
                                     <option value="0" disabled>Selecione uma opção</option>
                                     <option value="50">Até 50mil</option>
                                     <option value="100">De 50mil a 100mil</option>
-                                    <option value="100">De 100mil a 250mil</option>
-                                    <option value="100">De 250mil a 500mil</option>
-                                    <option value="100">De 500mil a 1 milhão</option>
-                                    <option value="100">Acima de 1 milhão</option>
+                                    <option value="250">De 100mil a 250mil</option>
+                                    <option value="500">De 250mil a 500mil</option>
+                                    <option value="1000">De 500mil a 1 milhão</option>
+                                    <option value="1001">Acima de 1 milhão</option>
                                  </select>
                                  <span class="list__label">Faturamento médio mensal</span>
                               </label>
@@ -614,13 +609,13 @@
                         <div class="formlargeText">
                            <div class="helperCenter">
                               <label class="textArea">
-                              <textarea class="textArea__field" id="mensagem" placeholder=" " maxlength="200" autocomplete="nope"></textarea>
+                              <textarea class="textArea__field" name="mensagem" id="mensagem" placeholder=" " maxlength="200" autocomplete="nope"></textarea>
                               <span class="textArea__label">Digite sua mensagem aqui</span>
                               </label>
                            </div>
                         </div>
                         <div class="formCheckbox">
-                           <input type="checkbox" id="ToS" class="ToS" required />
+                           <input type="checkbox" name="ToS" id="ToS" class="ToS" required />
                            <span class="ToS__label"> Você concorda com os nossos <a href="">Termos de Uso</a>?</span>
                         </div>
                         <div class="formEnviarBtn">
