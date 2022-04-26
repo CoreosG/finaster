@@ -35,14 +35,6 @@ document.addEventListener('input', e => {
    
 	loader.addEventListener('animationend', function() {
 	  check.classList.add('active');
-	  setTimeout(function(){
-		loader.classList.remove('active') ;
-		check.classList.remove('active');
-		btn.classList.remove('hidden');
-	  }, 2000);
-	  setTimeout(function(){
-		loader.classList.add('hidden');
-	  }, 2000);
 	});
   });
 

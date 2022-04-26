@@ -128,8 +128,7 @@ $(document).ready(function(){
 	$('.header').height($(window).height());
 
 	$(document).on( "click", 'a[href^="#"]', function( e ) { 
-		e.preventDefault(); 
-		console.log("fodase")    
+		e.preventDefault();    
 		var target = this.hash,         
 		    $target = $(target);    
 		$('html, body').stop().animate({ 
